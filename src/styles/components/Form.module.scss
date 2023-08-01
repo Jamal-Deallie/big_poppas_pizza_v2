@@ -1,0 +1,82 @@
+@use '../base/functions' as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: mobile-vw(16px);
+
+  textarea {
+    height: mobile-vw(150px);
+    resize: none;
+    border-radius: 4px;
+    border: 2.5px solid var(--secondary-variant);
+    background-color: var(--tertiary-variant);
+    width: 100%;
+    color: var(--secondary-variant);
+    padding: mobile-vw(8px) mobile-vw(8px) 0;
+    font-size: mobile-vw(16px);
+  }
+
+  textarea::placeholder {
+    color: var(--secondary-variant);
+  }
+
+  @include desktop {
+    gap: desktop-vw(16px);
+
+    textarea {
+      height: desktop-vw(395px);
+      padding: desktop-vw(16px) desktop-vw(8px) 0 desktop-vw(8px);
+      font-size: desktop-vw(19px);
+    }
+  }
+}
+
+.btn {
+  appearance: button;
+  background-color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 20px;
+  overflow: visible;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:active {
+    box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
+    outline: 0;
+  }
+
+  &:not([disabled]):active {
+    box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+    transform: translate(2px, 2px);
+  }
+
+  // @media (min-width: 768px) {
+  //   padding: 12px 50px;
+  // }
+
+  @include desktop {
+    padding: desktop-vw(16px) desktop-vw(36px);
+    margin-right: desktop-vw(10px);
+    font-size: desktop-vw(19px);
+  }
+}

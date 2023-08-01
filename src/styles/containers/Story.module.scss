@@ -1,0 +1,90 @@
+@use '../base/functions' as *;
+
+.story {
+  aside,
+  .content {
+    grid-column: 1/-1;
+    margin-top: mobile-vw(48px);
+    p + p {
+      margin-top: mobile-vw(8px);
+    }
+    span {
+      display: block;
+    }
+  }
+
+  @include desktop {
+    aside,
+    .content {
+      margin-top: desktop-vw(128px);
+    }
+    aside {
+      grid-column: 8 / -1;
+    }
+    .content {
+      grid-column: 1 / 7;
+      p + p {
+        margin-top: desktop-vw(16px);
+      }
+    }
+  }
+}
+
+.sig {
+  position: relative;
+  aspect-ratio: 510.95932 / 278.34607;
+  width: desktop-vw(200px);
+  height: auto;
+  margin-top: mobile-vw(16px);
+
+  @include desktop {
+    margin-top: desktop-vw(24px);
+    width: desktop-vw(200px);
+    height: auto;
+  }
+}
+
+.title {
+  grid-column: 1 / -1;
+  @include desktop {
+    max-width: desktop-vw(900px);
+    margin-inline: auto;
+  }
+}
+.img {
+  position: relative;
+  aspect-ratio: 1;
+  border: 2.5px solid var(--secondary-variant);
+}
+
+.content {
+  p + p {
+    margin-top: mobile-vw(16px);
+  }
+  @include desktop {
+    grid-column: 1 / 7;
+
+    p + p {
+      margin-top: desktop-vw(24px);
+    }
+  }
+}
+
+.logo {
+  position: relative;
+  aspect-ratio: 1;
+  height: mobile-vw(24px);
+  width: auto;
+  margin-inline: auto;
+  margin-bottom: mobile-vw(16px);
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  @include desktop {
+    margin-bottom: desktop-vw(16px);
+    height: desktop-vw(40px);
+  }
+}

@@ -1,0 +1,60 @@
+.primary-theme {
+  position: relative;
+  background-color: var(--primary-variant);
+}
+.primary-theme .title-lg {
+  color: var(--secondary-variant);
+}
+.primary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.secondary-theme {
+  position: relative;
+  background-color: var(--secondary-variant);
+}
+.secondary-theme .title-lg {
+  color: var(--tertiary-variant);
+}
+.secondary-theme .desc {
+  color: var(--tertiary-variant);
+}
+
+.tertiary-theme {
+  position: relative;
+  background-color: var(--tertiary-variant);
+}
+.tertiary-theme .title-lg {
+  color: var(--primary-variant);
+}
+.tertiary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.menu {
+  z-index: 9;
+  height: auto;
+  width: 100%;
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  transform: translate(0%, -250%);
+  opacity: 0;
+  padding-bottom: 10.4166666667vw;
+}
+
+.links li + li {
+  margin-top: 4.4444444444vw;
+}
+
+.bg {
+  display: none;
+  opacity: 0;
+  z-index: 8;
+  height: calc(100vh - var(--nav-height));
+  width: 100%;
+  position: fixed;
+  top: var(--nav-height);
+  background: rgba(0, 0, 0, 0.7);
+}/*# sourceMappingURL=DesktopMenu.module.css.map */

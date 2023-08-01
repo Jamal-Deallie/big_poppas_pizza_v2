@@ -1,0 +1,50 @@
+@use '../base/functions' as *;
+.text-flex {
+  display: flex;
+  align-items: center;
+  .smiley-face {
+    display: block;
+    display: flex;
+    align-items: center;
+
+    svg {
+      width: 100%;
+      aspect-ratio: 245.49/210.68;
+      height: desktop-vw(75px);
+    }
+  }
+}
+
+.text-marquee {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: desktop-vw(10px) 0;
+}
+
+.text-single {
+  position: relative;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  will-change: transform;
+}
+
+.text {
+  padding: 0;
+  display: inline-block;
+}
+
+.text-flex {
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: 1px;
+  line-height: 0.91;
+  font-family: var(--heading-font), sans-serif;
+  font-weight: 700;
+  font-size: desktop-vw(113px);
+  color: transparent;
+  -webkit-text-stroke-width: 4.75px;
+  -webkit-text-stroke-color: var(--secondary-variant);
+}

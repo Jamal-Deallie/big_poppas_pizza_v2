@@ -1,0 +1,15 @@
+@use '../base/functions' as *;
+
+.title-cont {
+  grid-column: 1 / -1;
+}
+
+.form-wrap {
+  @include mobile {
+    margin: mobile-vw(16px) 0;
+  }
+  grid-column: 1 / -1;
+  @include desktop {
+    grid-column: 2 / 12;
+  }
+}

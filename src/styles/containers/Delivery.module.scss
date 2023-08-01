@@ -1,0 +1,53 @@
+@use '../base/functions' as *;
+
+.delivery {
+  position: relative;
+  height: fit-content;
+}
+
+.content {
+  position: relative;
+  height: fit-content;
+  @include desktop {
+    width: 50%;
+    margin-left: auto;
+  }
+}
+
+.inner {
+  position: relative;
+  height: fit-content;
+}
+
+.marquee-cont {
+  position: absolute;
+  width: 100%;
+  @include desktop {
+    height: fit-content;
+  }
+}
+
+// .text-cont {
+//   padding: mobile-vw(16px);
+//   @include desktop {
+//     padding-inline: desktop-vw(40px);
+//   }
+// }
+
+.doodle {
+  width: 100%;
+  overflow: hidden;
+
+  svg {
+    aspect-ratio: 521.71/242.93;
+    height: auto;
+    width: mobile-vw(200px);
+    transform: translate(100%);
+  }
+  @include desktop {
+    svg {
+      width: desktop-vw(375px);
+      transform: translate(105%);
+    }
+  }
+}

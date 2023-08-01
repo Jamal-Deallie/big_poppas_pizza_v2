@@ -1,0 +1,77 @@
+.primary-theme {
+  position: relative;
+  background-color: var(--primary-variant);
+}
+.primary-theme .title-lg {
+  color: var(--secondary-variant);
+}
+.primary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.secondary-theme {
+  position: relative;
+  background-color: var(--secondary-variant);
+}
+.secondary-theme .title-lg {
+  color: var(--tertiary-variant);
+}
+.secondary-theme .desc {
+  color: var(--tertiary-variant);
+}
+
+.tertiary-theme {
+  position: relative;
+  background-color: var(--tertiary-variant);
+}
+.tertiary-theme .title-lg {
+  color: var(--primary-variant);
+}
+.tertiary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.title-cont {
+  position: relative;
+  grid-column: 1/-1;
+}
+@media (min-width: 849px) {
+  .title-cont {
+    grid-column: 2/6;
+  }
+}
+
+.arrow-cont {
+  position: absolute;
+  aspect-ratio: 152.59/109.3;
+  width: 8.6805555556vw;
+  height: auto;
+  transform: translate(50.3472222222vw, -10.0694444444vw);
+}
+.arrow-cont svg {
+  rotate: -10deg;
+}
+@media (max-width: 849px) {
+  .arrow-cont {
+    display: none;
+  }
+}
+
+.img-cont {
+  grid-column: 1/-1;
+  position: relative;
+  aspect-ratio: 3/4;
+  height: auto;
+  width: 100%;
+}
+.img-cont img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 849px) {
+  .img-cont {
+    grid-column: 8/-1;
+  }
+}/*# sourceMappingURL=Flavors.module.css.map */

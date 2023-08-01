@@ -1,0 +1,125 @@
+@use '../base/functions' as *;
+
+.title {
+  grid-column: 1 / -1;
+}
+
+.form-wrap {
+  @include mobile {
+    margin: mobile-vw(16px) 0;
+  }
+  grid-column: 1 / -1;
+  @include desktop {
+    grid-column: 2 / 12;
+  }
+}
+
+.img {
+  aspect-ratio: 360.81 / 326.35;
+  position: relative;
+  width: mobile-vw(70px);
+  height: auto;
+  img {
+    width: mobile-vw(70px);
+    height: auto;
+    object-fit: contain;
+  }
+
+  @include desktop {
+    width: desktop-vw(75px);
+    height: auto;
+    img {
+      width: desktop-vw(75px);
+      height: auto;
+    }
+  }
+}
+
+.col {
+  width: 100%;
+}
+.items {
+  grid-column: 1 / -1;
+
+  h2,
+  p {
+    color: var(--tertiary-variant);
+  }
+
+  h2 {
+    font-family: var(heading-font);
+    font-size: mobile-vw(16px);
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: mobile-vw(8px);
+  }
+
+  @include desktop {
+    grid-column: 1 / 6;
+    div + div {
+      margin-top: desktop-vw(24px);
+    }
+    h2 {
+      margin-bottom: desktop-vw(8px);
+      font-size: desktop-vw(20px);
+    }
+  }
+}
+
+.title-cont {
+  grid-column: 1/-1;
+  @include desktop {
+    grid-column: 1/10;
+  }
+}
+.desc-cont {
+  max-width: mobile-vw(550px);
+
+  @include desktop {
+    max-width: desktop-vw(550px);
+  }
+}
+
+.map-wrap {
+  overflow: hidden;
+  position: relative;
+  margin-top: mobile-vw(24px);
+  border: solid 2.5px var(--secondary-variant);
+  height: mobile-vw(325px);
+
+  @include desktop {
+    margin-top: desktop-vw(48px);
+    width: 100%;
+    background: #000;
+    height: desktop-vw(325px);
+  }
+}
+
+.content {
+  grid-column: 1/-1;
+  @include desktop {
+    grid-column: 1/5;
+  }
+}
+
+.map-cont {
+  grid-column: 1/-1;
+  border: solid 2.5px var(--secondary-variant);
+  @include desktop {
+    grid-column: 6/-1;
+  }
+}
+
+.carousel-wrap {
+  grid-column: 1/-1;
+}
+.map-inner {
+  overflow: hidden;
+  position: relative;
+  height: mobile-vw(325px);
+  @include desktop {
+    width: 100%;
+    background: #000;
+    height: desktop-vw(525px);
+  }
+}

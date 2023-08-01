@@ -1,0 +1,111 @@
+@use '../base/functions' as *;
+
+.grid-wrap {
+  margin-top: mobile-vw(64px);
+  @include desktop {
+    margin-top: desktop-vw(64px);
+  }
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto, 1fr);
+  place-content: center;
+  .item {
+    aspect-ratio: 3 /2;
+    width: mobile-vw(200px);
+    height: auto;
+  }
+  .logo {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    img {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  @include desktop {
+    width: 100%;
+    grid-template-columns: repeat(4, desktop-vw(200px));
+    grid-gap: desktop-vw(72px);
+
+    .item {
+      width: desktop-vw(200px);
+    }
+
+    .logo {
+      position: relative;
+      margin: 0px;
+      height: 100%;
+      width: 100%;
+
+      img {
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.link-cont {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  span {
+    display: block;
+  }
+}
+
+.link-cont {
+  &::before {
+    content: '';
+    color: var(--secondary-variant);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.link {
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+  white-space: nowrap;
+  color: var(--secondary-variant);
+
+  svg {
+    top: 73%;
+    left: -23%;
+  }
+}
+
+.graphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  fill: none;
+  stroke: #000;
+  stroke-width: 1px;
+  path {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    transition: stroke-dashoffset 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+  }
+}
+
+.link:hover .graphic path {
+  stroke-dashoffset: 0;
+  transition-timing-function: cubic-bezier(0.8, 1, 0.7, 1);
+  transition-duration: 0.3s;
+}

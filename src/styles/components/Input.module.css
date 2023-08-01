@@ -1,0 +1,66 @@
+.primary-theme {
+  position: relative;
+  background-color: var(--primary-variant);
+}
+.primary-theme .title-lg {
+  color: var(--secondary-variant);
+}
+.primary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.secondary-theme {
+  position: relative;
+  background-color: var(--secondary-variant);
+}
+.secondary-theme .title-lg {
+  color: var(--tertiary-variant);
+}
+.secondary-theme .desc {
+  color: var(--tertiary-variant);
+}
+
+.tertiary-theme {
+  position: relative;
+  background-color: var(--tertiary-variant);
+}
+.tertiary-theme .title-lg {
+  color: var(--primary-variant);
+}
+.tertiary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.input {
+  width: 100%;
+  color: var(--secondary-variant);
+  padding: 1.0666666667vw 1.0666666667vw;
+  font-size: 3.7333333333vw;
+  border-radius: 4px;
+  border: 2.5px solid var(--input-border);
+  background-color: var(--tertiary-variant);
+  line-height: 1;
+}
+.input::-moz-placeholder {
+  color: rgb(133, 133, 133);
+}
+.input::placeholder {
+  color: rgb(133, 133, 133);
+}
+@media (min-width: 849px) {
+  .input {
+    min-height: 3.3333333333vw;
+    padding: 0.5555555556vw 0.5555555556vw;
+    font-size: 1.3194444444vw;
+  }
+}
+
+.input[disabled] {
+  --input-border: #ccc;
+  background-color: #eee;
+  cursor: not-allowed;
+}
+
+.input:focus {
+  border-color: hsl(var(--input-focus-h), var(--input-focus-s), var(--input-focus-l));
+}/*# sourceMappingURL=Input.module.css.map */

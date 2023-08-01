@@ -1,0 +1,132 @@
+.primary-theme {
+  position: relative;
+  background-color: var(--primary-variant);
+}
+.primary-theme .title-lg {
+  color: var(--secondary-variant);
+}
+.primary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.secondary-theme {
+  position: relative;
+  background-color: var(--secondary-variant);
+}
+.secondary-theme .title-lg {
+  color: var(--tertiary-variant);
+}
+.secondary-theme .desc {
+  color: var(--tertiary-variant);
+}
+
+.tertiary-theme {
+  position: relative;
+  background-color: var(--tertiary-variant);
+}
+.tertiary-theme .title-lg {
+  color: var(--primary-variant);
+}
+.tertiary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+@media (max-width: 849px) {
+  .title-cont p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 849px) {
+  .card-reverse .title-cont {
+    order: 1;
+  }
+  .card-reverse .icon {
+    order: 2;
+  }
+}
+@media (min-width: 849px) {
+  .card-reverse .title-cont {
+    grid-column: 7/-1;
+    order: 2;
+  }
+  .card-reverse .icon {
+    grid-column: 2/6;
+    order: 1;
+  }
+}
+
+.meat,
+.cheese,
+.bread,
+.vegetables {
+  place-self: center;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.meat svg,
+.cheese svg,
+.bread svg,
+.vegetables svg {
+  width: 70%;
+  height: auto;
+}
+@media (max-width: 849px) {
+  .meat,
+  .cheese,
+  .bread,
+  .vegetables {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (min-width: 849px) {
+  .meat,
+  .cheese,
+  .bread,
+  .vegetables {
+    width: 100%;
+    height: auto;
+  }
+  .meat svg,
+  .cheese svg,
+  .bread svg,
+  .vegetables svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.icon {
+  height: 28vw;
+  margin-inline: auto;
+}
+@media (min-width: 849px) {
+  .icon {
+    height: 10.7638888889vw;
+  }
+}
+
+@media (max-width: 849px) {
+  .icon:not(first-child) {
+    margin-top: 17.0666666667vw;
+  }
+}
+
+.icon-meat {
+  aspect-ratio: 512.82/573.23;
+}
+
+.icon-bread {
+  aspect-ratio: 354.87/391.45;
+}
+
+.icon-cheese {
+  aspect-ratio: 404.98/413.8;
+}
+
+.icon-vegetables {
+  aspect-ratio: 360.62/440.55;
+}/*# sourceMappingURL=NutritionCard.module.css.map */

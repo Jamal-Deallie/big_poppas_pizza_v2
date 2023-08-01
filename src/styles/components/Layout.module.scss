@@ -1,0 +1,17 @@
+@use '../base/functions' as *;
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  .main-wrap {
+    flex-grow: 1;
+    min-height: calc(100vh - var(--nav-height));
+  }
+
+  @include desktop {
+    .main-wrap {
+      margin-top: var(--nav-height);
+    }
+  }
+}

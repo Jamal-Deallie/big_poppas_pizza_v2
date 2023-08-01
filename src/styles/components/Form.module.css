@@ -1,0 +1,110 @@
+.primary-theme {
+  position: relative;
+  background-color: var(--primary-variant);
+}
+.primary-theme .title-lg {
+  color: var(--secondary-variant);
+}
+.primary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.secondary-theme {
+  position: relative;
+  background-color: var(--secondary-variant);
+}
+.secondary-theme .title-lg {
+  color: var(--tertiary-variant);
+}
+.secondary-theme .desc {
+  color: var(--tertiary-variant);
+}
+
+.tertiary-theme {
+  position: relative;
+  background-color: var(--tertiary-variant);
+}
+.tertiary-theme .title-lg {
+  color: var(--primary-variant);
+}
+.tertiary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 4.2666666667vw;
+}
+.form textarea {
+  height: 40vw;
+  resize: none;
+  border-radius: 4px;
+  border: 2.5px solid var(--secondary-variant);
+  background-color: var(--tertiary-variant);
+  width: 100%;
+  color: var(--secondary-variant);
+  padding: 2.1333333333vw 2.1333333333vw 0;
+  font-size: 4.2666666667vw;
+}
+.form textarea::-moz-placeholder {
+  color: var(--secondary-variant);
+}
+.form textarea::placeholder {
+  color: var(--secondary-variant);
+}
+@media (min-width: 849px) {
+  .form {
+    gap: 1.1111111111vw;
+  }
+  .form textarea {
+    height: 27.4305555556vw;
+    padding: 1.1111111111vw 0.5555555556vw 0 0.5555555556vw;
+    font-size: 1.3194444444vw;
+  }
+}
+
+.btn {
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  background-color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 20px;
+  overflow: visible;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.btn:focus {
+  text-decoration: none;
+}
+.btn:hover {
+  text-decoration: none;
+}
+.btn:active {
+  box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
+  outline: 0;
+}
+.btn:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+@media (min-width: 849px) {
+  .btn {
+    padding: 1.1111111111vw 2.5vw;
+    margin-right: 0.6944444444vw;
+    font-size: 1.3194444444vw;
+  }
+}/*# sourceMappingURL=Form.module.css.map */

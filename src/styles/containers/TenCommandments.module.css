@@ -1,0 +1,87 @@
+.primary-theme {
+  position: relative;
+  background-color: var(--primary-variant);
+}
+.primary-theme .title-lg {
+  color: var(--secondary-variant);
+}
+.primary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.secondary-theme {
+  position: relative;
+  background-color: var(--secondary-variant);
+}
+.secondary-theme .title-lg {
+  color: var(--tertiary-variant);
+}
+.secondary-theme .desc {
+  color: var(--tertiary-variant);
+}
+
+.tertiary-theme {
+  position: relative;
+  background-color: var(--tertiary-variant);
+}
+.tertiary-theme .title-lg {
+  color: var(--primary-variant);
+}
+.tertiary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.commandments {
+  position: relative;
+}
+
+@media (min-width: 849px) {
+  .title-cont {
+    max-width: 62.5vw;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 849px) {
+  .card-wrap {
+    grid-column: 1/-1;
+  }
+}
+
+@media (min-width: 849px) {
+  .card-wrap:nth-of-type(odd) {
+    grid-column: 2/6;
+  }
+}
+
+@media (min-width: 849px) {
+  .card-wrap:nth-of-type(even) {
+    grid-column: 8/12;
+  }
+}
+
+@media (min-width: 849px) {
+  .card-wrap:nth-of-type(3),
+  .card-wrap:nth-of-type(4) {
+    margin-top: 8.3333333333vw;
+  }
+}
+
+.doodle-cont {
+  aspect-ratio: 736/229.625;
+  position: absolute;
+  margin-top: -4vw;
+  height: auto;
+  width: 80vw;
+}
+@media (max-width: 849px) {
+  .doodle-cont {
+    margin-left: 4.2666666667vw;
+  }
+}
+@media (min-width: 849px) {
+  .doodle-cont {
+    margin-top: -3.125vw;
+    width: 56.25vw;
+  }
+}/*# sourceMappingURL=TenCommandments.module.css.map */

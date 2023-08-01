@@ -1,0 +1,107 @@
+.primary-theme {
+  position: relative;
+  background-color: var(--primary-variant);
+}
+.primary-theme .title-lg {
+  color: var(--secondary-variant);
+}
+.primary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.secondary-theme {
+  position: relative;
+  background-color: var(--secondary-variant);
+}
+.secondary-theme .title-lg {
+  color: var(--tertiary-variant);
+}
+.secondary-theme .desc {
+  color: var(--tertiary-variant);
+}
+
+.tertiary-theme {
+  position: relative;
+  background-color: var(--tertiary-variant);
+}
+.tertiary-theme .title-lg {
+  color: var(--primary-variant);
+}
+.tertiary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.reviews {
+  position: relative;
+  width: 100%;
+}
+
+.wrapper {
+  position: relative;
+  border: 2.5px solid black;
+  height: 48.6111111111vw;
+  width: 83.3333333333vw;
+  margin-inline: auto;
+  overflow: hidden;
+  background: var(--tertiary-variant);
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 83.3333333333vw;
+  height: 48.6111111111vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  text-align: center;
+  opacity: 0;
+}
+@media (max-width: 849px) {
+  .review {
+    width: 100%;
+  }
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+@media (max-width: 849px) {
+  .button-row {
+    margin-top: 12.8vw;
+  }
+}
+
+.button {
+  height: 4.2666666667vw;
+  width: 4.2666666667vw;
+  border-radius: 50%;
+  background: var(--tertiary-variant);
+  border: 0.75px solid;
+}
+@media (min-width: 849px) {
+  .button {
+    height: 1.1111111111vw;
+    width: 1.1111111111vw;
+  }
+}
+
+.image {
+  position: relative;
+  width: 83.3333333333vw;
+  height: 52.0833333333vw;
+}
+.image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}/*# sourceMappingURL=FadeInCarousel.module.css.map */

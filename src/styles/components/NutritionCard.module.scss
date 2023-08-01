@@ -1,0 +1,89 @@
+@use '../base/functions' as *;
+
+.card:not(first-child) {
+  @include mobile {
+  }
+}
+
+.title-cont {
+  @include mobile {
+    p {
+      text-align: center;
+    }
+  }
+}
+.card-reverse {
+  @include mobile {
+    .title-cont {
+      order: 1;
+    }
+
+    .icon {
+      order: 2;
+    }
+  }
+  @include desktop {
+    .title-cont {
+      grid-column: 7/-1;
+      order: 2;
+    }
+    .icon {
+      grid-column: 2/6;
+      order: 1;
+    }
+  }
+}
+
+.meat,
+.cheese,
+.bread,
+.vegetables {
+  place-self: center;
+  position: relative;
+  width: 100%;
+  height: auto;
+  svg {
+    width: 70%;
+    height: auto;
+  }
+
+  @include mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @include desktop {
+    width: 100%;
+    height: auto;
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.icon {
+  height: mobile-vw(105px);
+  margin-inline: auto;
+  @include desktop {
+    height: desktop-vw(155px);
+  }
+}
+.icon:not(first-child) {
+  @include mobile {
+    margin-top: mobile-vw(64px);
+  }
+}
+
+.icon-meat {
+  aspect-ratio: 512.82/573.23;
+}
+.icon-bread {
+  aspect-ratio: 354.87/391.45;
+}
+.icon-cheese {
+  aspect-ratio: 404.98/413.8;
+}
+.icon-vegetables {
+  aspect-ratio: 360.62/440.55;
+}

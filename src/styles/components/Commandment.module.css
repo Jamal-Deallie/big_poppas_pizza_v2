@@ -1,0 +1,109 @@
+.primary-theme {
+  position: relative;
+  background-color: var(--primary-variant);
+}
+.primary-theme .title-lg {
+  color: var(--secondary-variant);
+}
+.primary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.secondary-theme {
+  position: relative;
+  background-color: var(--secondary-variant);
+}
+.secondary-theme .title-lg {
+  color: var(--tertiary-variant);
+}
+.secondary-theme .desc {
+  color: var(--tertiary-variant);
+}
+
+.tertiary-theme {
+  position: relative;
+  background-color: var(--tertiary-variant);
+}
+.tertiary-theme .title-lg {
+  color: var(--primary-variant);
+}
+.tertiary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.commandment {
+  background-color: var(--tertiary-variant);
+  border: 1px solid var(--tertiary-variant);
+  border-radius: 6px;
+  box-shadow: var(--secondary-variant) 4px 4px 0 0, var(--secondary-variant) 7px 6px 0 0, var(--secondary-variant) 7px 6px 0 0, var(--secondary-variant) 7px 6px 0 0, var(--tertiary-variant) 7px 4.5px 0 1px, var(--tertiary-variant) 7px 6px 0 1px;
+  color: var(--secondary-variant);
+  font-family: var(--heading-font);
+  aspect-ratio: 16/11;
+  width: 90%;
+  margin-inline: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 849px) {
+  .commandment {
+    width: 100%;
+  }
+}
+
+.inner {
+  padding: 4.2666666667vw;
+}
+.inner h5 {
+  text-transform: capitalize;
+  font-weight: 700;
+  letter-spacing: 0.75px;
+  font-size: 4.2666666667vw;
+}
+@media (min-width: 849px) {
+  .inner {
+    padding: 0 1.6666666667vw;
+  }
+  .inner h5 {
+    font-size: 1.7361111111vw;
+  }
+}
+
+.icon-meat,
+.icon-cheese,
+.icon-bread,
+.icon-vegetables {
+  position: relative;
+  width: auto;
+  height: 16vw;
+}
+@media (min-width: 849px) {
+  .icon-meat,
+  .icon-cheese,
+  .icon-bread,
+  .icon-vegetables {
+    height: 12.5vw;
+  }
+  .icon-meat svg,
+  .icon-cheese svg,
+  .icon-bread svg,
+  .icon-vegetables svg {
+    height: 12.5vw;
+  }
+}
+
+.icon-meat {
+  aspect-ratio: 221.09/394.72;
+}
+
+.icon-bread {
+  aspect-ratio: 354.87/391.45;
+}
+
+.icon-cheese {
+  aspect-ratio: 194.44/130.22;
+}
+
+.icon-vegetables {
+  aspect-ratio: 360/440;
+}/*# sourceMappingURL=Commandment.module.css.map */

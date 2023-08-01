@@ -1,0 +1,100 @@
+.primary-theme {
+  position: relative;
+  background-color: var(--primary-variant);
+}
+.primary-theme .title-lg {
+  color: var(--secondary-variant);
+}
+.primary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.secondary-theme {
+  position: relative;
+  background-color: var(--secondary-variant);
+}
+.secondary-theme .title-lg {
+  color: var(--tertiary-variant);
+}
+.secondary-theme .desc {
+  color: var(--tertiary-variant);
+}
+
+.tertiary-theme {
+  position: relative;
+  background-color: var(--tertiary-variant);
+}
+.tertiary-theme .title-lg {
+  color: var(--primary-variant);
+}
+.tertiary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.form-cont label {
+  letter-spacing: 0.5px;
+  margin-bottom: 1.0666666667vw;
+}
+@media (min-width: 849px) {
+  .form-cont label {
+    margin-bottom: 0.2777777778vw;
+  }
+}
+
+.error {
+  color: tomato;
+  min-height: 24px;
+}
+
+@media (min-width: 849px) {
+  .flex-cont {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.1111111111vw;
+    justify-content: space-between;
+  }
+}
+
+.radio-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.1333333333vw;
+}
+.radio-group .radio-cont {
+  flex: 1;
+  padding: 1.0666666667vw 1.0666666667vw;
+  font-size: 4.2666666667vw;
+  min-height: 6.6666666667vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2.5px solid var(--primary-variant);
+  background-color: var(tertiary-variant);
+  color: var(--primary-variant);
+  border-radius: 4px;
+  text-align: center;
+  transition: 0.3s;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+.radio-group .radio-cont:hover {
+  border: 2.5px solid transparent;
+  color: var(--tertiary-variant);
+  background-color: var(--primary-variant);
+}
+@media (min-width: 849px) {
+  .radio-group {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5555555556vw;
+    width: 100%;
+  }
+  .radio-group .radio-cont {
+    align-self: flex-start;
+    flex-shrink: none;
+    margin-top: 0.2777777778vw;
+    min-height: 3.3333333333vw;
+    padding: 0.5555555556vw 0.5555555556vw;
+    font-size: 1.3194444444vw;
+  }
+}/*# sourceMappingURL=ReservationForm.module.css.map */

@@ -1,0 +1,53 @@
+.primary-theme {
+  position: relative;
+  background-color: var(--primary-variant);
+}
+.primary-theme .title-lg {
+  color: var(--secondary-variant);
+}
+.primary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.secondary-theme {
+  position: relative;
+  background-color: var(--secondary-variant);
+}
+.secondary-theme .title-lg {
+  color: var(--tertiary-variant);
+}
+.secondary-theme .desc {
+  color: var(--tertiary-variant);
+}
+
+.tertiary-theme {
+  position: relative;
+  background-color: var(--tertiary-variant);
+}
+.tertiary-theme .title-lg {
+  color: var(--primary-variant);
+}
+.tertiary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.title-cont {
+  grid-column: 1/-1;
+}
+
+.desc-cont {
+  grid-column: 1/-1;
+}
+@media (min-width: 849px) {
+  .desc-cont {
+    grid-column: 1/6;
+  }
+}
+
+.accordion-cont {
+  grid-column: 1/-1;
+}
+
+.accordion-wrap:not(:first-of-type) {
+  border-top: 2.5px solid;
+}/*# sourceMappingURL=Accordions.module.css.map */

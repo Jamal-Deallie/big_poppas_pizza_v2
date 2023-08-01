@@ -1,0 +1,32 @@
+@use '../base/functions' as *;
+
+.scroll-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+  position: fixed;
+  margin-left: auto;
+  cursor: pointer;
+  right: 0;
+  transform: translateY(90vh);
+  margin-right: mobile-vw(16px);
+  width: mobile-vw(40px);
+  height: mobile-vw(40px);
+  padding: mobile-vw(10px);
+  border-radius: 50%;
+  background-color: rgba(37, 50, 50, 0.9);
+  border: 1px solid var(--tertiary-variant);
+  svg {
+    fill: var(--tertiary-variant);
+    aspect-ratio: 1;
+    width: 100%;
+    height: auto;
+  }
+  @include desktop {
+    margin-right: desktop-vw(40px);
+    width: desktop-vw(48px);
+    height: desktop-vw(48px);
+    padding: desktop-vw(12px);
+  }
+}

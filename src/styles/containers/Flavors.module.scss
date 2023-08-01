@@ -1,0 +1,54 @@
+@use '../base/functions' as *;
+.flavors-cont {
+  aside {
+    position: relative;
+  }
+}
+
+.title-cont {
+  position: relative;
+  grid-column: 1/-1;
+  @include desktop {
+    grid-column: 2/6;
+  }
+}
+
+.arrow-doodle {
+  position: absolute;
+  aspect-ratio: 152.59/109.3;
+  width: desktop-vw(125px);
+  height: auto;
+  transform: translate(desktop-vw(725px), desktop-vw(-145px));
+  svg {
+    rotate: -10deg;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+.random-doodle {
+  position: absolute;
+  aspect-ratio: 176.62/156.36;
+  width: desktop-vw(100px);
+  height: auto;
+  transform: translate(desktop-vw(800px), desktop-vw(260px));
+  svg {
+    rotate: -25deg;
+  }
+}
+.img-cont {
+  grid-column: 1/-1;
+  position: relative;
+  aspect-ratio: 3/4;
+  height: auto;
+  width: 100%;
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  @include desktop {
+    grid-column: 8/-1;
+  }
+}

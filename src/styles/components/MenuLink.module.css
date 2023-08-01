@@ -1,0 +1,81 @@
+.primary-theme {
+  position: relative;
+  background-color: var(--primary-variant);
+}
+.primary-theme .title-lg {
+  color: var(--secondary-variant);
+}
+.primary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.secondary-theme {
+  position: relative;
+  background-color: var(--secondary-variant);
+}
+.secondary-theme .title-lg {
+  color: var(--tertiary-variant);
+}
+.secondary-theme .desc {
+  color: var(--tertiary-variant);
+}
+
+.tertiary-theme {
+  position: relative;
+  background-color: var(--tertiary-variant);
+}
+.tertiary-theme .title-lg {
+  color: var(--primary-variant);
+}
+.tertiary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.link-cont {
+  width: 100%;
+}
+
+.vid-cont {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  background: #fff;
+  margin-left: 6.9444444444vw;
+}
+
+.wrap {
+  background-color: var(--secondary-variant);
+  border: 2.5px solid var(--tertiary-variant);
+  overflow: hidden;
+}
+.wrap video {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+.link {
+  position: relative;
+}
+
+.drinks,
+.dessert {
+  width: 27.7777777778vw;
+  height: 20.8333333333vw;
+}
+.drinks video,
+.dessert video {
+  width: 27.7777777778vw;
+  height: 20.8333333333vw;
+}
+
+.pizza {
+  width: 20.8333333333vw;
+  height: 27.7777777778vw;
+}
+.pizza video {
+  width: 20.8333333333vw;
+  height: 27.7777777778vw;
+}/*# sourceMappingURL=MenuLink.module.css.map */

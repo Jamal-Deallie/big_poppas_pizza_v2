@@ -1,0 +1,48 @@
+.primary-theme {
+  position: relative;
+  background-color: var(--primary-variant);
+}
+.primary-theme .title-lg {
+  color: var(--secondary-variant);
+}
+.primary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.secondary-theme {
+  position: relative;
+  background-color: var(--secondary-variant);
+}
+.secondary-theme .title-lg {
+  color: var(--tertiary-variant);
+}
+.secondary-theme .desc {
+  color: var(--tertiary-variant);
+}
+
+.tertiary-theme {
+  position: relative;
+  background-color: var(--tertiary-variant);
+}
+.tertiary-theme .title-lg {
+  color: var(--primary-variant);
+}
+.tertiary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.item {
+  cursor: pointer;
+  border-bottom: 2.5px solid;
+  border-left: 2.5px solid;
+  border-right: 2.5px solid;
+}
+
+.title {
+  width: 100%;
+}
+
+.content {
+  height: 0;
+  overflow: hidden;
+}/*# sourceMappingURL=Accordion.module.css.map */

@@ -1,0 +1,24 @@
+@use '../base/functions' as *;
+
+.layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: mobile-vw(24px) mobile-vw(16px);
+  justify-content: center;
+  color: var(--tertiary-variant);
+  margin-top: mobile-vw(48px);
+
+  @include desktop {
+    margin-top: desktop-vw(96px);
+    gap: desktop-vw(64px) desktop-vw(24px);
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  }
+}
+
+.title {
+  margin-inline: auto;
+  text-align: center;
+  @include mobile {
+    max-width: mobile-vw(200px);
+  }
+}

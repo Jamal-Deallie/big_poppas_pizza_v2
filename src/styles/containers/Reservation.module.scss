@@ -1,0 +1,36 @@
+@use '../base/functions' as *;
+
+.form-cont {
+  background: #000;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  appearance: button;
+  background-color: transparent;
+  color: var(--primary-variant);
+  border-radius: 50%;
+  margin-right: mobile-vw(5px);
+  height: calc(var(--nav-height) - mobile-vw(24px));
+  width: calc(var(--nav-height) - mobile-vw(24px));
+  svg {
+    height: 100%;
+    width: 100%;
+    fill: var(--tertiary-variant);
+  }
+
+  &:hover {
+    background-color: var(--primary-variant);
+    svg {
+      fill: var(--secondary-variant);
+    }
+  }
+
+  @include desktop {
+    width: calc(var(--nav-height) - desktop-vw(32px));
+    height: calc(var(--nav-height) - desktop-vw(32px));
+    margin-right: desktop-vw(5px);
+  }
+}

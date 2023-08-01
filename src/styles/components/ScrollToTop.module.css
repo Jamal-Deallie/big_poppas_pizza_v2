@@ -1,0 +1,65 @@
+.primary-theme {
+  position: relative;
+  background-color: var(--primary-variant);
+}
+.primary-theme .title-lg {
+  color: var(--secondary-variant);
+}
+.primary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.secondary-theme {
+  position: relative;
+  background-color: var(--secondary-variant);
+}
+.secondary-theme .title-lg {
+  color: var(--tertiary-variant);
+}
+.secondary-theme .desc {
+  color: var(--tertiary-variant);
+}
+
+.tertiary-theme {
+  position: relative;
+  background-color: var(--tertiary-variant);
+}
+.tertiary-theme .title-lg {
+  color: var(--primary-variant);
+}
+.tertiary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.scroll-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+  position: fixed;
+  margin-left: auto;
+  cursor: pointer;
+  right: 0;
+  transform: translateY(90vh);
+  margin-right: 4.2666666667vw;
+  width: 10.6666666667vw;
+  height: 10.6666666667vw;
+  padding: 2.6666666667vw;
+  border-radius: 50%;
+  background-color: rgba(37, 50, 50, 0.9);
+  border: 1px solid var(--tertiary-variant);
+}
+.scroll-btn svg {
+  fill: var(--tertiary-variant);
+  aspect-ratio: 1;
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 849px) {
+  .scroll-btn {
+    margin-right: 2.7777777778vw;
+    width: 3.3333333333vw;
+    height: 3.3333333333vw;
+    padding: 0.8333333333vw;
+  }
+}/*# sourceMappingURL=ScrollToTop.module.css.map */

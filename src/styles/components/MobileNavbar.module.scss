@@ -1,0 +1,54 @@
+@use '../base/functions' as *;
+
+.navbar {
+  z-index: 9;
+  opacity: 1;
+  background-color: var(--secondary-variant);
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: var(--nav-height);
+
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1.75px solid var(--tertiary-variant);
+}
+
+.inner {
+  position: relative;
+  height: var(--nav-height);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: mobile-vw(32px);
+  height: mobile-vw(32px);
+}
+
+.active {
+  fill: var(--tertiary-variant);
+}
+
+.btn-cont {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: var(--nav-height);
+
+  @include desktop {
+    height: var(--nav-height);
+  }
+}
+
+.btn {
+  position: absolute;
+  height: var(--nav-height);
+  cursor: pointer;
+  color: var(--tertiary-variant);
+  z-index: 100;
+}

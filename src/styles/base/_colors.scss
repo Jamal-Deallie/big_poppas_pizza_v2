@@ -1,0 +1,23 @@
+@use 'sass:color';
+
+$colors: (
+  'primary': #e05333,
+  'secondary': #000,
+  'tertiary': #fff,
+  'ghost': transparent,
+);
+
+@each $name, $color in $colors {
+  .bg-#{$name} {
+    background-color: #{$color};
+  }
+  .clr-#{$name} {
+    color: #{$color};
+  }
+}
+
+:root {
+  @each $name, $color in $colors {
+    --#{$name}-variant: #{$color};
+  }
+}

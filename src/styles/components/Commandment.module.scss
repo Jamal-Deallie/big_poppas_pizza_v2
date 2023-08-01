@@ -1,0 +1,71 @@
+@use '../base/functions' as *;
+
+.commandment {
+  background-color: var(--tertiary-variant);
+  border: 1px solid var(--tertiary-variant);
+  border-radius: 6px;
+  box-shadow: var(--secondary-variant) 4px 4px 0 0,
+    var(--secondary-variant) 7px 6px 0 0, var(--secondary-variant) 7px 6px 0 0,
+    var(--secondary-variant) 7px 6px 0 0,
+    var(--tertiary-variant) 7px 4.5px 0 1px,
+    var(--tertiary-variant) 7px 6px 0 1px;
+  color: var(--secondary-variant);
+  font-family: var(--heading-font);
+  aspect-ratio: 16/11;
+  width: 90%;
+  margin-inline: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+
+  @include desktop {
+    width: 100%;
+  }
+}
+
+.inner {
+  padding: mobile-vw(16px);
+  h5 {
+    text-transform: capitalize;
+    font-weight: 700;
+    letter-spacing: 0.75px;
+    font-size: mobile-vw(16px);
+  }
+
+  @include desktop {
+    padding: 0 desktop-vw(24px);
+    h5 {
+      font-size: desktop-vw(25px);
+    }
+  }
+}
+
+.icon-meat,
+.icon-cheese,
+.icon-bread,
+.icon-vegetables {
+  position: relative;
+  width: auto;
+  height: mobile-vw(60px);
+
+  @include desktop {
+    height: desktop-vw(180px);
+
+    svg {
+      height: desktop-vw(180px);
+    }
+  }
+}
+
+.icon-meat {
+  aspect-ratio: 221.09/394.72;
+}
+.icon-bread {
+  aspect-ratio: 354.87/391.45;
+}
+.icon-cheese {
+  aspect-ratio: 194.44/130.22;
+}
+.icon-vegetables {
+  aspect-ratio: 360/440;
+}

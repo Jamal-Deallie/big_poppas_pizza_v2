@@ -1,0 +1,275 @@
+@import url('https://use.typekit.net/jes2hnw.css');
+@import './_functions.scss';
+
+$font-sizes: (
+  '13': 109.21px,
+  '12': 95.37px,
+  '11': 76.29px,
+  '10': 61.04px,
+  '9': 48.83px,
+  '8': 39.06px,
+  '7': 31.25px,
+  '6': 25px,
+  '5': 20px,
+  '4': 16px,
+  '3': 12.8px,
+  '2': 10.24px,
+  '1': 8.19px,
+);
+
+h1,
+h2 {
+  font-family: var(--heading-font), sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-style: normal;
+  letter-spacing: 1px;
+  line-height: 86%;
+  @include desktop {
+    letter-spacing: -0.03em;
+  }
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font), sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 86%;
+}
+
+p {
+  font-family: var(--body-font), sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 125%;
+}
+
+.text {
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  font-size: mobile-vw(12px);
+
+  @include desktop {
+    font-size: desktop-vw(16px);
+    line-height: 133%;
+  }
+}
+
+.text-sm {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  font-size: mobile-vw(14px);
+
+  @include desktop {
+    font-size: desktop-vw(14px);
+    line-height: 114%;
+  }
+}
+
+.split-child {
+  display: inline-block;
+  opacity: 1;
+}
+
+.title-lg {
+  font-size: mobile-vw(map-get($font-sizes, '8'));
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: var(--heading-font), sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: 1px;
+
+  @include mobile {
+    text-align: center;
+  }
+  @include desktop {
+    font-size: desktop-vw(map-get($font-sizes, '13'));
+    line-height: 0.88;
+    letter-spacing: -0.5px;
+    // -webkit-text-stroke-width: 2.75px;
+  }
+
+  &.border {
+    -webkit-text-stroke-width: 1.75px;
+    -webkit-text-stroke-color: var(--secondary-variant);
+    @include desktop {
+      -webkit-text-stroke-width: 2.75px;
+      -webkit-text-stroke-color: var(--secondary-variant);
+    }
+  }
+}
+
+.title-md {
+  font-size: mobile-vw(31.25px);
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: var(--heading-font), sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: 1px;
+  @include desktop {
+    font-size: desktop-vw(map-get($font-sizes, '9'));
+  }
+
+  &.border {
+    -webkit-text-stroke-width: 1.75px;
+    -webkit-text-stroke-color: var(--secondary-variant);
+    @include desktop {
+      -webkit-text-stroke-width: 2.75px;
+      -webkit-text-stroke-color: var(--secondary-variant);
+    }
+  }
+}
+
+.title-sm {
+  font-size: mobile-vw(map-get($font-sizes, '4'));
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: var(--heading-font), sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: 1.2px;
+  @include desktop {
+    font-size: desktop-vw(map-get($font-sizes, '6'));
+  }
+
+  &.border {
+    -webkit-text-stroke-width: thin;
+    -webkit-text-stroke-color: var(--secondary-variant);
+    @include desktop {
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: var(--secondary-variant);
+    }
+  }
+}
+
+.title-xs {
+  font-size: mobile-vw(map-get($font-sizes, '3'));
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: var(--heading-font), sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: 1px;
+  @include desktop {
+    font-size: desktop-vw(map-get($font-sizes, '4'));
+  }
+
+  &.border {
+    -webkit-text-stroke-width: 1.75px;
+    -webkit-text-stroke-color: var(--secondary-variant);
+    @include desktop {
+      -webkit-text-stroke-width: 2.75px;
+      -webkit-text-stroke-color: var(--secondary-variant);
+    }
+  }
+}
+
+.subheader {
+  color: var(--tertiary-variant);
+  font-weight: 400;
+  grid-column: 1/ -1;
+
+  @include desktop {
+    margin-bottom: desktop-vw(-8px);
+    margin-left: desktop-vw(8px);
+  }
+}
+
+.desc-center {
+  display: flex;
+  justify-content: center;
+  grid-column: 1 / -1;
+  p {
+    max-width: 600px;
+  }
+  @include desktop {
+    p {
+      max-width: 55ch;
+    }
+  }
+}
+
+.desc-left {
+  grid-column: 1 / -1;
+  p {
+    max-width: 500px;
+  }
+  @include desktop {
+    grid-column: 1 / span 5;
+  }
+}
+
+.txt-md-sm {
+  font-family: var(--body-font), sans-serif;
+  font-size: mobile-vw(map-get($font-sizes, '3'));
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 125%;
+
+  @include desktop {
+    font-size: desktop-vw(map-get($font-sizes, '4'));
+    line-height: 133%;
+  }
+}
+
+.txt {
+  font-family: var(--body-font), sans-serif;
+  font-size: mobile-vw(map-get($font-sizes, '4'));
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 125%;
+
+  @include desktop {
+    font-size: desktop-vw(map-get($font-sizes, '4'));
+    line-height: 133%;
+  }
+}
+
+.txt-md {
+  font-family: var(--body-font), sans-serif;
+  font-size: mobile-vw(map-get($font-sizes, '4'));
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 125%;
+  @include desktop {
+    font-size: desktop-vw(map-get($font-sizes, '5'));
+    line-height: 133%;
+  }
+}
+
+.txt-lg {
+  font-family: var(--body-font), sans-serif;
+  font-size: mobile-vw(map-get($font-sizes, '4'));
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 125%;
+  @include desktop {
+    font-size: desktop-vw(map-get($font-sizes, '6'));
+    line-height: 133%;
+  }
+}
+
+.txt-bold {
+  font-family: var(--body-font), sans-serif;
+  font-size: mobile-vw(16px);
+  font-weight: 600;
+  line-height: 125%;
+  letter-spacing: -0.03em;
+
+  @include desktop {
+    font-size: desktop-vw(19px);
+    line-height: 133%;
+  }
+}

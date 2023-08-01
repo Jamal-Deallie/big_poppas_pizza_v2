@@ -1,0 +1,47 @@
+@use '../base/functions' as *;
+
+.link-cont {
+  width: 100%;
+}
+
+.vid-cont {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  background: #fff;
+  margin-left: desktop-vw(100px);
+}
+
+.wrap {
+  background-color: var(--secondary-variant);
+  border: 2.5px solid var(--tertiary-variant);
+  overflow: hidden;
+  video {
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+.link {
+  position: relative;
+}
+
+.drinks,
+.dessert {
+  width: desktop-vw(400px);
+  height: desktop-vw(300px);
+  video {
+    width: desktop-vw(400px);
+    height: desktop-vw(300px);
+  }
+}
+
+.pizza {
+  width: desktop-vw(300px);
+  height: desktop-vw(400px);
+  video {
+    width: desktop-vw(300px);
+    height: desktop-vw(400px);
+  }
+}

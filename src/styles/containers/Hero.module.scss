@@ -1,0 +1,194 @@
+@use '../base/functions' as *;
+
+.hero {
+  @include desktop {
+    padding-bottom: desktop-vw(40px);
+  }
+}
+
+.inner {
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+
+  @include mobile {
+    min-height: $mobile-height;
+    height: 100vh;
+  }
+  @include desktop {
+    padding-inline: desktop-vw(40px);
+    min-height: 600px;
+    height: calc(95vh - var(--nav-height));
+    max-height: var(--desktop-height);
+  }
+}
+
+.cta,
+.inner,
+.img {
+  width: 100%;
+  @include mobile {
+    min-height: $mobile-height;
+    height: 100vh;
+  }
+  @include desktop {
+    min-height: 600px;
+    height: calc(95vh - var(--nav-height));
+    max-height: var(--desktop-height);
+  }
+}
+
+.img {
+  position: relative;
+  overflow: hidden;
+
+  background: var(--tertiary-variant);
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @include desktop {
+      border: 2px solid var(--tertiary-variant);
+      object-position: 50% 45%;
+    }
+    @include mobile {
+      object-position: 70% 55%;
+    }
+  }
+}
+
+.cta {
+  position: absolute;
+
+  .inner {
+    .title {
+      .underline {
+        width: fit-content;
+        position: relative;
+        @include mobile {
+          padding-bottom: mobile-vw(12px);
+        }
+        &::after {
+          content: '';
+          aspect-ratio: 253.295 / 24.372;
+          position: absolute;
+          right: 100%;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: auto;
+          background-image: url('https://res.cloudinary.com/dtwk4dm3g/image/upload/v1683002654/big_poppas/underline_migghm.svg');
+          background-size: cover;
+          background-position: 50%;
+          background-repeat: no-repeat;
+          transition: all 0.3s;
+        }
+      }
+      @include mobile {
+        .accent {
+          width: fit-content;
+          position: relative;
+          padding-bottom: 7.5px;
+          &::after {
+            content: '';
+            aspect-ratio: 49.202 / 44.418;
+            position: absolute;
+            top: mobile-vw(-8px);
+            left: mobile-vw(-18px);
+            width: mobile-vw(25px);
+            height: auto;
+            background-image: url('https://res.cloudinary.com/dtwk4dm3g/image/upload/v1683002654/big_poppas/accent_do5b5w.svg');
+            background-size: cover;
+            background-position: 50%;
+            background-repeat: no-repeat;
+            transition: all 0.3s;
+          }
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    top: 45%;
+    .inner {
+      @include flexbox($direction: column, $alignContent: center);
+      padding: mobile-vw(24px) mobile-vw(16px) mobile-vw(48px) mobile-vw(16px);
+    }
+  }
+  @include desktop {
+    top: 0;
+    .inner {
+      @include flexbox($direction: column, $justifyContent: center);
+      height: 100%;
+      width: desktop-vw(700px);
+      padding-inline: desktop-vw(64px);
+      .desc {
+        display: block;
+        max-width: desktop-vw(550px);
+        margin: desktop-vw(32px) 0 desktop-vw(32px);
+      }
+    }
+    .underline {
+      padding-bottom: desktop-vw(24px);
+    }
+    .accent {
+      width: fit-content;
+      position: relative;
+      padding-bottom: 7.5px;
+      &::after {
+        content: '';
+        aspect-ratio: 49.202 / 44.418;
+        position: absolute;
+        top: desktop-vw(-8px);
+        left: desktop-vw(-35px);
+        width: desktop-vw(45px);
+        height: auto;
+        background-image: url('https://res.cloudinary.com/dtwk4dm3g/image/upload/v1683002654/big_poppas/accent_do5b5w.svg');
+        background-size: cover;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        transition: all 0.3s;
+      }
+    }
+  }
+}
+.btn-cont {
+  @include mobile {
+    margin-top: mobile-vw(32px);
+  }
+}
+
+.hero-title {
+  font-size: mobile-vw(40px);
+  line-height: 0.9;
+  text-transform: uppercase;
+  font-family: var(--heading-font), sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  color: var(--primary-variant);
+  text-align: center;
+  -webkit-text-stroke-width: 1.75px;
+  -webkit-text-stroke-color: var(--secondary-variant);
+  @include mobile {
+    margin-right: mobile-vw(12px);
+  }
+  @include desktop {
+    text-align: left;
+    font-size: desktop-vw(95.37px);
+    line-height: 0.88;
+    letter-spacing: -1.5px;
+    -webkit-text-stroke-width: 2.75px;
+  }
+}
+
+.hero-title + .hero-title {
+  display: flex;
+  gap: mobile-vw(12px);
+  @include mobile {
+    justify-content: center;
+    margin-right: mobile-vw(0px);
+  }
+  @include desktop {
+    gap: desktop-vw(12px);
+  }
+}

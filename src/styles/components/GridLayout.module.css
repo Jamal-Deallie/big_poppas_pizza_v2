@@ -1,0 +1,58 @@
+.primary-theme {
+  position: relative;
+  background-color: var(--primary-variant);
+}
+.primary-theme .title-lg {
+  color: var(--secondary-variant);
+}
+.primary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.secondary-theme {
+  position: relative;
+  background-color: var(--secondary-variant);
+}
+.secondary-theme .title-lg {
+  color: var(--tertiary-variant);
+}
+.secondary-theme .desc {
+  color: var(--tertiary-variant);
+}
+
+.tertiary-theme {
+  position: relative;
+  background-color: var(--tertiary-variant);
+}
+.tertiary-theme .title-lg {
+  color: var(--primary-variant);
+}
+.tertiary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 6.4vw 4.2666666667vw;
+  justify-content: center;
+  color: var(--tertiary-variant);
+  margin-top: 12.8vw;
+}
+@media (min-width: 849px) {
+  .layout {
+    margin-top: 6.6666666667vw;
+    gap: 4.4444444444vw 1.6666666667vw;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  }
+}
+
+.title {
+  margin-inline: auto;
+  text-align: center;
+}
+@media (max-width: 849px) {
+  .title {
+    max-width: 53.3333333333vw;
+  }
+}/*# sourceMappingURL=GridLayout.module.css.map */

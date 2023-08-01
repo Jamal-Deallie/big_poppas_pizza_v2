@@ -1,0 +1,121 @@
+.primary-theme {
+  position: relative;
+  background-color: var(--primary-variant);
+}
+.primary-theme .title-lg {
+  color: var(--secondary-variant);
+}
+.primary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.secondary-theme {
+  position: relative;
+  background-color: var(--secondary-variant);
+}
+.secondary-theme .title-lg {
+  color: var(--tertiary-variant);
+}
+.secondary-theme .desc {
+  color: var(--tertiary-variant);
+}
+
+.tertiary-theme {
+  position: relative;
+  background-color: var(--tertiary-variant);
+}
+.tertiary-theme .title-lg {
+  color: var(--primary-variant);
+}
+.tertiary-theme .desc {
+  color: var(--secondary-variant);
+}
+
+.link {
+  cursor: pointer;
+  white-space: nowrap;
+  position: relative;
+  font-family: var(--heading-font);
+  font-size: 4vw;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--tertiary-variant);
+  letter-spacing: 1.5px;
+}
+@media (min-width: 849px) {
+  .link {
+    font-size: 1.1111111111vw;
+  }
+}
+.link:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: var(--tertiary-variant);
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+}
+.link:hover {
+  color: var(--primary-variant);
+}
+.link:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: var(--tertiary-variant);
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+}
+.link:before {
+  transform-origin: 100% 50%;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+.link:hover:before {
+  transform-origin: 0% 50%;
+  transform: scale3d(1, 1, 1);
+  transition-timing-function: cubic-bezier(0.4, 1, 0.8, 1);
+}
+.link:after {
+  content: "";
+  transform-origin: 0% 50%;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+.link:hover:after {
+  top: calc(100% + 4px);
+  transform-origin: 100% 50%;
+  transform: scale3d(1, 1, 1);
+  transition-timing-function: cubic-bezier(0.4, 1, 0.8, 1);
+}
+
+.active {
+  color: var(--primary-variant);
+}
+.active:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: var(--tertiary-variant);
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+}
+.active:hover {
+  color: var(--tertiary-variant);
+}
+.active:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: var(--tertiary-variant);
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+}/*# sourceMappingURL=NavLinks.module.css.map */

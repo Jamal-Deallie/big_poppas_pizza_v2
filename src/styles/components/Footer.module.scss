@@ -1,0 +1,122 @@
+@use '../base/functions' as *;
+
+.footer {
+  width: 100%;
+
+  padding-top: mobile-vw(24px);
+  z-index: 1;
+  @include desktop {
+    padding-top: desktop-vw(64px);
+  }
+
+  a {
+    text-transform: capitalize;
+  }
+
+  span {
+    font-weight: 700;
+  }
+  .link-wrap,
+  .support-wrap,
+  .social-wrap {
+    @include mobile {
+      width: mobile-vw(150px);
+    }
+    @include desktop {
+      justify-self: flex-end;
+    }
+
+    ul {
+      @include mobile {
+        margin: mobile-vw(12px) 0 mobile-vw(24px);
+      }
+    }
+
+    li {
+      @include mobile {
+        margin: mobile-vw(24px) 0;
+        min-width: mobile-vw(72px);
+      }
+      @include desktop {
+        margin: desktop-vw(24px) 0;
+        min-width: desktop-vw(48px);
+      }
+    }
+
+    li {
+      a {
+        @include mobile {
+          min-width: mobile-vw(72px);
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.desc {
+  width: 100%;
+  grid-column: 1 / -1;
+
+  @include desktop {
+    grid-column: 1 / 6;
+  }
+}
+
+.links {
+  display: flex;
+  gap: mobile-vw(40px);
+  grid-column: 1 / -1;
+
+  @include desktop {
+    justify-content: flex-end;
+    grid-column: 7 / -1;
+    gap: desktop-vw(64px);
+  }
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--tertiary-variant);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: mobile-vw(16px);
+  @include mobile {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: mobile-vw(24px);
+  }
+  @include desktop {
+    align-items: center;
+    padding: desktop-vw(8px) desktop-vw(40px);
+  }
+}
+
+.support {
+  display: flex;
+  gap: mobile-vw(32px);
+
+  @include desktop {
+    gap: desktop-vw(32px);
+  }
+}
+.icons {
+  display: flex;
+  align-items: center;
+  gap: mobile-vw(32px);
+
+  svg {
+    width: mobile-vw(30px);
+    height: mobile-vw(30px);
+    fill: var(--tertiary-variant);
+  }
+  @include desktop {
+    gap: desktop-vw(32px);
+    svg {
+      aspect-ratio: 1;
+      width: desktop-vw(25px);
+      height: desktop-vw(25px);
+    }
+  }
+}

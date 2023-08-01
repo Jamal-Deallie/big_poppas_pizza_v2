@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  text-rendering: geometricPrecision; /* 2 */
+  -webkit-font-smoothing: antialiased; /* 3 */
+  -webkit-font-smoothing: subpixel-antialiased; /* 3 */
+  -moz-font-smoothing: antialiased; /* 3 */
+  font-smooth: antialiased; /* 3 */
+  -moz-osx-font-smoothing: grayscale; /* 3 */
+  scrollbar-width: thin;
+  background-image: var(--bg-gradient);
+  &.lenis-stopped {
+    overflow: hidden;
+  }
+}
+
+html,
+body {
+  overscroll-behavior: none;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
+*:not(iframe, canvas, img, svg, video, svg *) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box !important;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul {
+  list-style: none;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+a,
+button,
+input,
+label,
+textarea,
+select {
+  color: inherit;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  padding: 0;
+
+  @media screen and (-ms-high-contrast: active) {
+    border: 2px solid currentcolor;
+  }
+}

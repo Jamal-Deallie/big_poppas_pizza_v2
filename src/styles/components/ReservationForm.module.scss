@@ -1,0 +1,69 @@
+@use '../base/functions' as *;
+@use 'sass:color';
+
+.form-cont {
+  label {
+    letter-spacing: 0.5px;
+    margin-bottom: mobile-vw(4px);
+    @include desktop {
+      margin-bottom: desktop-vw(4px);
+    }
+  }
+}
+
+.error {
+  color: tomato;
+  min-height: 24px;
+}
+
+.flex-cont {
+  @include desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: desktop-vw(16px);
+    justify-content: space-between;
+  }
+}
+
+.radio-group {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+  gap: mobile-vw(8px);
+  .radio-cont {
+    flex: 1;
+    padding: mobile-vw(4px) mobile-vw(4px);
+    font-size: mobile-vw(16px);
+    min-height: mobile-vw(25px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2.5px solid var(--primary-variant);
+    background-color: var(tertiary-variant);
+    color: var(--primary-variant);
+    border-radius: 4px;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    &:hover {
+      border: 2.5px solid transparent;
+      color: var(--tertiary-variant);
+      background-color: var(--primary-variant);
+    }
+  }
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+    gap: desktop-vw(8px);
+    width: 100%;
+    .radio-cont {
+      align-self: flex-start;
+      flex-shrink: none;
+      margin-top: desktop-vw(4px);
+      min-height: desktop-vw(48px);
+      padding: desktop-vw(8px) desktop-vw(8px);
+      font-size: desktop-vw(19px);
+    }
+  }
+}

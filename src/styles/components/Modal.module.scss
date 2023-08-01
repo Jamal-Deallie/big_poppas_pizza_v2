@@ -1,0 +1,91 @@
+@use '../base/functions' as *;
+
+.modal {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+
+  &.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-bg {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.85);
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+}
+
+.btn-cont {
+  width: 100%;
+  display: flex;
+  margin-bottom: mobile-vw(24px);
+  @include desktop {
+    margin-bottom: desktop-vw(24px);
+  }
+}
+
+.btn-close {
+  display: inline-block;
+  border-radius: 50%;
+  width: mobile-vw(32px);
+  height: mobile-vw(32px);
+  transition: all 0.3s ease-in;
+  margin-left: auto;
+  span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    svg {
+      stroke: var(--secondary-variant);
+    }
+  }
+  &:hover {
+    svg {
+      stroke: var(--primary-variant);
+    }
+  }
+
+  @include desktop {
+    width: desktop-vw(24px);
+    height: desktop-vw(24px);
+  }
+}
+.inner {
+  position: relative;
+  width: 100%;
+  transform: translateY(50px);
+  background-color: #fff;
+  border-radius: 4px;
+
+  opacity: 0;
+  visibility: hidden;
+  z-index: 501;
+  padding: mobile-vw(24px);
+  @include mobile {
+    overflow-y: scroll;
+    max-height: 100vh;
+  }
+  @include desktop {
+    aspect-ratio: 4/3;
+    height: auto;
+    max-height: calc(100vh - var(--nav-height));
+    width: desktop-vw(1000px);
+    padding: desktop-vw(64px);
+  }
+}

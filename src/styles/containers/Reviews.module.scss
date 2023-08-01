@@ -1,0 +1,8 @@
+@use '../base/functions' as *;
+
+.title-cont {
+  @include desktop {
+    margin-inline: auto;
+    width: desktop-vw(900px);
+  }
+}

@@ -1,0 +1,27 @@
+@use '../base/functions' as *;
+
+.content {
+  grid-column: 1/-1;
+  @include desktop {
+    grid-column: 1/5;
+  }
+}
+
+.map-cont {
+  grid-column: 1/-1;
+  border: solid 2.5px var(--secondary-variant);
+  @include desktop {
+    grid-column: 6/-1;
+  }
+}
+
+.map-inner {
+  overflow: hidden;
+  position: relative;
+  height: mobile-vw(325px);
+  @include desktop {
+    width: 100%;
+    background: #000;
+    height: desktop-vw(500px);
+  }
+}

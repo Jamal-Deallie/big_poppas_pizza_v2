@@ -1,0 +1,119 @@
+@use 'sass:map';
+@use '../base/functions' as *;
+
+$themes: (
+  primary: (
+    bg: var(--primary-variant),
+    text: var(--secondary-variant),
+    shadow: var(--secondary-variant),
+    outline: var(--secondary-variant),
+    border: var(--secondary-variant),
+  ),
+  secondary: (
+    bg: var(--secondary-variant),
+    text: var(--tertiary-variant),
+    outline: var(--tertiary-variant),
+    shadow: var(--secondary-variant),
+    border: var(--secondary-variant),
+  ),
+  tertiary: (
+    bg: var(--tertiary-variant),
+    text: var(--secondary-variant),
+    shadow: var(--secondary-variant),
+    outline: var(--secondary-variant),
+    border: var(--secondary-variant),
+  ),
+);
+
+@mixin button-color-theme($theme) {
+  color: map.get(map.get($themes, $theme), text);
+  background-color: map.get(map.get($themes, $theme), bg);
+  box-shadow: map.get(map.get($themes, $theme), outline) 3px 3px 0 0,
+    map.get(map.get($themes, $theme), shadow) 4px 4px 0 1px;
+  border: 2px solid map.get(map.get($themes, $theme), border);
+  transition: all 160ms ease-in-out;
+  &:hover {
+    box-shadow: map.get(map.get($themes, $theme), outline) 2px 2px 0 0,
+      map.get(map.get($themes, $theme), shadow) 2px 2px 0 1px;
+    transform: translate(2px, 2px);
+  }
+}
+
+.base {
+  $this: &;
+  appearance: button;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.1;
+  overflow: visible;
+  text-align: center;
+  text-transform: capitalize;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-family: var(--heading-font);
+  min-width: 10ch;
+  @include mobile {
+    width: 100%;
+  }
+
+  &#{$this}-disabled {
+    color: grey;
+    background-color: grey;
+    border-color: grey;
+    cursor: default;
+
+    &:hover {
+      color: grey;
+      background-color: grey;
+      border-color: grey;
+    }
+  }
+}
+
+.sm {
+  min-height: mobile-vw(40px);
+  font-size: mobile-vw(12px);
+  padding: mobile-vw(8px) mobile-vw(24px);
+  @include desktop {
+    padding: desktop-vw(12px) desktop-vw(10px);
+    font-size: desktop-vw(15px);
+    min-height: desktop-vw(40px);
+  }
+}
+
+.md {
+  min-height: mobile-vw(48px);
+  font-size: mobile-vw(15px);
+  padding: mobile-vw(8px) mobile-vw(32px);
+  @include desktop {
+    padding: desktop-vw(12px) desktop-vw(12px);
+    font-size: desktop-vw(16px);
+    min-height: desktop-vw(48px);
+  }
+}
+
+.lg {
+  padding: mobile-vw(10px) mobile-vw(40px);
+  font-size: mobile-vw(16px);
+  min-height: mobile-vw(48px);
+  @include desktop {
+    padding: desktop-vw(12px) desktop-vw(48px);
+    font-size: desktop-vw(19px);
+    min-height: desktop-vw(48px);
+  }
+}
+
+.primary-variant {
+  @include button-color-theme(primary);
+}
+.secondary-variant {
+  @include button-color-theme(secondary);
+}
+.tertiary-variant {
+  @include button-color-theme(tertiary);
+}

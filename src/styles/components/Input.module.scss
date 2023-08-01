@@ -1,0 +1,35 @@
+@use '../base/functions' as *;
+
+.input {
+  width: 100%;
+  color: var(--secondary-variant);
+  padding: mobile-vw(4px) mobile-vw(4px);
+  font-size: mobile-vw(14px);
+  border-radius: 4px;
+  border: 2.5px solid var(--input-border);
+  background-color: var(--tertiary-variant);
+  line-height: 1;
+  &::placeholder {
+    color: rgb(133, 133, 133);
+  }
+
+  @include desktop {
+    min-height: desktop-vw(48px);
+    padding: desktop-vw(8px) desktop-vw(8px);
+    font-size: desktop-vw(19px);
+  }
+}
+
+.input[disabled] {
+  --input-border: #ccc;
+  background-color: #eee;
+  cursor: not-allowed;
+}
+
+.input:focus {
+  border-color: hsl(
+    var(--input-focus-h),
+    var(--input-focus-s),
+    var(--input-focus-l)
+  );
+}

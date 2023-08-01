@@ -1,0 +1,31 @@
+@use '../base/functions' as *;
+
+.menu {
+  z-index: 9;
+  height: auto;
+  width: 100%;
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  transform: translate(0%, -250%);
+  opacity: 0;
+  padding-bottom: desktop-vw(150px);
+}
+
+.links {
+  li + li {
+    margin-top: desktop-vw(64px);
+  }
+}
+
+.bg {
+  display: none;
+  opacity: 0;
+  z-index: 8;
+  height: calc(100vh - var(--nav-height));
+  width: 100%;
+  position: fixed;
+  top: var(--nav-height);
+  background: rgb(0, 0, 0, 0.7);
+}
