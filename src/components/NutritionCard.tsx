@@ -35,8 +35,8 @@ export default function NutritionCard({
         {renderedIcon(icon)}
       </div>
       <div className={styles['title-cont']}>
-        <h1 className='title-sm clr-primary border sm-mt-2 lg-mt-4 tac'>{title}</h1>
-        <p className='txt-md sm-mt-2 lg-mt-2 clr-secondary tac'>{commandment}</p>
+        <h1 className='title-sm clr-primary border mt-sm-16 mt-lg-32 tac'>{title}</h1>
+        <p className='txt-md mt-lg-16 mt-sm-16 clr-secondary tac'>{commandment}</p>
       </div>
     </div>
   );

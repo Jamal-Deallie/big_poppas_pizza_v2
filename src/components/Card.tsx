@@ -3,10 +3,8 @@ import Image from 'next/image';
 import styles from '@/styles/components/Card.module.scss';
 
 type SlideProps = {
-  id?: number;
   src: string;
-  price?: number;
-  desc?: string;
+  price: number;
   name: string;
 };
 

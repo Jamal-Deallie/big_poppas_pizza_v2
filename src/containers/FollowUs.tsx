@@ -70,10 +70,10 @@ export default function FollowUs() {
         })}
 
         <div className={cn(styles['title-cont'], 'center title-item')}>
-          <h1 className='title-lg border clr-primary lg-mt-4 sm-mr-2 split'>
+          <h1 className='title-lg border clr-primary mt-lg-32 mr-sm-16 split'>
             Follow Us
           </h1>
-          <h2 className='title-md border clr-primary lg-mb-4 sm-mr-2 split'>
+          <h2 className='title-md border clr-primary mb-lg-32 mr-sm-16 split'>
             @BigPoppas
           </h2>
         </div>

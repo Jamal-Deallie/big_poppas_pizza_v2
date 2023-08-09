@@ -18,13 +18,13 @@ export default function Reservation({ as, variant }: Props) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const lenis = useLenis((lenis: any) => lenis);
   
-  useEffect(() => {
-    if (modalIsOpen) {
-      lenis?.stop();
-    } else {
-      lenis?.start();
-    }
-  }, [lenis, modalIsOpen]);
+  // useEffect(() => {
+  //   if (modalIsOpen) {
+  //     lenis?.stop();
+  //   } else {
+  //     lenis?.start();
+  //   }
+  // }, [lenis, modalIsOpen]);
 
   function toggleFunction() {
     setModalIsOpen(true);

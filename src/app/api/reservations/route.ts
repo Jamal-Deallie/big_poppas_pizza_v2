@@ -1,6 +1,6 @@
 import { connectToDatabase } from '@/lib/database';
 import { NextRequest, NextResponse } from 'next/server';
-import ReservationModel from '@/models/reservation';
+import Reservations from '@/models/reservation';
 
 connectToDatabase();
 export async function POST(req: NextRequest): Promise<Response> {
@@ -8,7 +8,7 @@ export async function POST(req: NextRequest): Promise<Response> {
 
   try {
     console.log(items);
-    const reservation = await ReservationModel.create(items);
+    const reservation = await Reservations.create(items);
     return NextResponse.json({ status: 204, success: true, data: reservation });
   } catch (e) {
     console.error(e);

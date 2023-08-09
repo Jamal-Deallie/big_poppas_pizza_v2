@@ -12,7 +12,7 @@ export default function Carousel({}: Props) {
   const matches = useMediaQuery('(max-width: 849px)');
   return (
     <section className='primary-theme'>
-   <div className='lg-py-16 sm-py-7'>
+   <div className='py-sm-64 py-lg-128 '>
         <div className='grid-inner'>
           <div className={styles['title-cont']}>
             <h1 className='title-lg'>Same Number Same Hood</h1>
@@ -26,7 +26,7 @@ export default function Carousel({}: Props) {
           </div>
           <div className={styles['carousel']}>
             {matches ? (
-              <div className={cn(styles['image'], 'sm-mt-7 lg-mt-5')}>
+              <div className={cn(styles['image'], 'mt-sm-64 mt-lg-40')}>
                 <Image
                   priority
                   src='https://res.cloudinary.com/dtwk4dm3g/image/upload/v1689143083/big_poppas/jonathan-borba-LBsh3JyBvu4-unsplash_1_afyakh.webp'

@@ -11,49 +11,18 @@ import cn from 'classnames';
 import Logo from '@/svgs/Logo';
 
 export default function MobileNavbar() {
-  gsap.registerPlugin(ScrollTrigger);
-  const navbarRef = useRef(null!);
-
-  useIsomorphicLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      const showNav = gsap
-        .fromTo(
-          navbarRef.current,
-          {
-            opacity: 0,
-          },
-          {
-            opacity: 1,
-            duration: 0.4,
-          }
-        )
-        .progress(1);
-      ScrollTrigger.create({
-        start: 'top top',
-        end: 'max',
-        onUpdate: self => {
-          self.direction === -1 ? showNav.play() : showNav.reverse();
-        },
-      });
-    }, navbarRef); // <- IMPORTANT! Scopes selector text
-
-    return () => ctx.revert();
-  }, []);
-
   return (
     <>
-      <nav
-        ref={navbarRef}
-        className={cn('bg-secondary hide-desk', styles['navbar'])}>
+      <nav className={cn('bg-secondary hide-desk', styles['navbar'])}>
         <div className={styles['inner']}>
-          <div className='sm-ml-2'>
+          <div className='ml-sm-16'>
             <Menu />
           </div>
 
           <div className={cn(styles['logo'], 'center')}>
             <Logo />
           </div>
-          <div className='sm-mr-2'>
+          <div className='mr-sm-16'>
             <Reservation as='icon' />
           </div>
         </div>

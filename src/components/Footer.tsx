@@ -23,7 +23,7 @@ export default function Footer({}: Props) {
         <div className={styles['links']}>
           <div className={styles['link-wrap']}>
             <h2 className='clr-tertiary title-xs'>Links</h2>
-            <ul className='sm-mt-2 lg-mt-2'>
+            <ul className='mt-sm-16 mt-lg-16'>
               {links.map(({ id, path, label }) => {
                 return (
                   <li key={id} className='clr-tertiary'>
@@ -37,7 +37,7 @@ export default function Footer({}: Props) {
           </div>
           <div className={styles['link-wrap']}>
             <h2 className='clr-tertiary title-xs'>Visit</h2>
-            <ul className='sm-mt-3 lg-mt-3'>
+            <ul className='mt-sm-24 mt-lg-24'>
               <li className='clr-tertiary'>
                 <p className='txt-md'>
                   129 Carlton Avenue

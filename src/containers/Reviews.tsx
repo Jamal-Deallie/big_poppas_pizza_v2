@@ -12,13 +12,13 @@ export default function Reviews() {
 
   return (
     <section className={cn('secondary-theme', styles['reviews'])}>
-    <div className='sm-py-7 lg-py-16'>
+    <div className='py-sm-64 py-lg-128'>
         <div className='main-cont'>
           <div className={styles['title-cont']}>
             <h1 className='title-lg tac'>The Reviews Are In</h1>
           </div>
           {matches ? (
-            <div className='sm-mt-6 lg-mt-10'>
+            <div className='mt-sm-64 mt-lg-96'>
               <div>
                 <MarqueeLoop>
                   <div className='marquee'>
@@ -43,7 +43,7 @@ export default function Reviews() {
               </div>
             </div>
           ) : (
-            <div className='loop-item sm-mt-6 lg-mt-10'>
+            <div className='loop-item mt-sm-64 mt-lg-96'>
               {reviewItems.slice(0, 3).map(({ id, name, review }) => (
                 <Review name={name} review={review} key={id} />
               ))}

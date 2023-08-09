@@ -1,7 +1,5 @@
 'use client';
 
-import { useRef } from 'react';
-import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayout';
 import styles from '@/styles/containers/Marquee.module.scss';
 import MarqueeText from '@/components/MarqueeText';
 import cn from 'classnames';

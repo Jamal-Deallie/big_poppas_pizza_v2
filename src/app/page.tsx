@@ -1,24 +1,32 @@
+import { Suspense } from 'react';
 import Intro from '@/containers/Intro';
 import Hero from '@/containers/Hero';
 import Feature from '@/containers/Feature';
 import Flavors from '@/containers/Flavors';
-import Reviews from '@/containers/Reviews';
 import TenCommandments from '@/containers/TenCommandments';
-import Video from '@/containers/Delivery';
 import FollowUs from '@/containers/FollowUs';
+import dynamic from 'next/dynamic';
+import Loading from '@/components/Loading';
 
+const DynamicDelivery = dynamic(() => import('@/containers/Delivery'), {
+  ssr: false,
+  loading: () => <Loading border='#fff' />,
+});
+const DynamicReviews = dynamic(() => import('@/containers/Reviews'), {
+  ssr: false,
+  loading: () => <Loading border='#fff' />,
+});
 export default function Home() {
   return (
-    <div className='of-hidden'>
+    <section className='of-hidden'>
       <Hero />
       <Feature />
       <Intro />
       <TenCommandments />
-      <Video />
-      {/* <Video src='https://res.cloudinary.com/dtwk4dm3g/video/upload/v1688349711/bp_pizza-vid_lfw5d3.mp4' /> */}
+      <DynamicDelivery />
       <Flavors />
-      <Reviews />
+      <DynamicReviews />
       <FollowUs />
-    </div>
+    </section>
   );
 }

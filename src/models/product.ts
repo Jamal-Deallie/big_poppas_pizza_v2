@@ -1,6 +1,6 @@
-import mongoose, { Document, model, Model, Schema } from 'mongoose';
+import mongoose from 'mongoose';
 
-const ProductSchema = new Schema({
+const ProductSchema = new mongoose.Schema({
   name: {
     type: String,
     required: [true, 'The product must have a name'],
@@ -25,7 +25,7 @@ const ProductSchema = new Schema({
   spicy: {
     type: Boolean,
     default: false,
-    required: [true, 'Confirm if the product is spicy'],
+    required: [false, 'Confirm if the product is spicy'],
   },
   createdAt: {
     type: Date,

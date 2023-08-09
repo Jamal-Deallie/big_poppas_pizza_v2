@@ -8,7 +8,7 @@ import cn from 'classnames';
 export default function Flavors() {
   return (
     <div className={cn(styles['flavors-cont'], 'tertiary-theme')}>
-      <div className='lg-pt-16 sm-pt-7'>
+      <div className='py-sm-64 pt-lg-128'>
         <div className='grid-block'>
           <aside className={styles['title-cont']}>
             <h1 className='title-lg border'>NOTORIOUS FLAVORS</h1>

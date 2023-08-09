@@ -1,19 +1,33 @@
-import { getModelForClass, prop } from '@typegoose/typegoose';
+import mongoose, { Document, model, Model, Schema } from 'mongoose';
 
-export class Reservations {
-  @prop()
-  date: Date;
-  @prop({ required: true })
-  time: string;
-  @prop({ required: true })
-  firstName: string;
-  @prop({ required: true })
-  lastName: string;
-  @prop({ required: true })
-  email: string;
-  @prop({ required: true })
-  partySize: number;
-}
+const ReservationSchema = new Schema({
+  time: {
+    type: String,
+    required: [true, 'The product must have a name'],
+    unique: true,
+  },
+  firstName: {
+    type: String,
+    required: [true, 'The product must have a slug'],
+    unique: true,
+  },
+  lastName: {
+    type: String,
+    required: [true, 'The product must have a description'],
+    unique: true,
+  },
+  partySize: { type: Number, required: [true, 'A tour must have a price'] },
+  email: {
+    type: String,
+    required: [true, 'The product must have a image'],
+    unique: true,
+  },
 
-const ReservationModel = getModelForClass(Reservations);
-export default ReservationModel;
+  date: {
+    type: Date,
+    required: [true, 'Confirm if the product is spicy'],
+  },
+});
+
+export default mongoose.models.Reservations ||
+  mongoose.model('Reservations', ReservationSchema);

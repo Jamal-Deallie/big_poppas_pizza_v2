@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Product from '@/models/product';
-import { IProduct } from '@/lib/types';
+
 import { connectToDatabase } from '@/lib/database';
 
 connectToDatabase();

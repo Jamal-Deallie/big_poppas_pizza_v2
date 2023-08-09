@@ -1,4 +1,3 @@
-@import url('https://use.typekit.net/jes2hnw.css');
 @import './_functions.scss';
 
 $font-sizes: (
@@ -107,7 +106,7 @@ p {
 }
 
 .title-md {
-  font-size: mobile-vw(31.25px);
+  font-size: mobile-vw(map-get($font-sizes, '7'));
   line-height: 1;
   text-transform: uppercase;
   font-family: var(--heading-font), sans-serif;
@@ -129,7 +128,7 @@ p {
 }
 
 .title-sm {
-  font-size: mobile-vw(map-get($font-sizes, '4'));
+  font-size: mobile-vw(map-get($font-sizes, '6'));
   line-height: 1;
   text-transform: uppercase;
   font-family: var(--heading-font), sans-serif;
@@ -151,7 +150,7 @@ p {
 }
 
 .title-xs {
-  font-size: mobile-vw(map-get($font-sizes, '3'));
+  font-size: mobile-vw(map-get($font-sizes, '5'));
   line-height: 1;
   text-transform: uppercase;
   font-family: var(--heading-font), sans-serif;

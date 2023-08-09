@@ -1,12 +1,15 @@
 import Story from '@/containers/Story';
-import TenCommandments from '@/containers/TenCommandments';
 
-type Props = {};
 
-export default function page({}: Props) {
+export const metadata = {
+  title: 'About Us',
+  description: 'About Big Poppas Pizza',
+};
+
+export default function page() {
   return (
-    <>
+    <section>
       <Story />
-    </>
+    </section>
   );
 }

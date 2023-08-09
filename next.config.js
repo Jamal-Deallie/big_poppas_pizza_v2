@@ -5,63 +5,23 @@ const nextConfig = {
   images: {
     domains: ['res.cloudinary.com'],
   },
+  experimental: {},
   sassOptions: {
     fiber: false,
   },
-  experimental: {
-    optimizeCss: true,
-  },
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: [
-        {
-          loader: '@svgr/webpack',
-          options: {
-            memo: true,
-            dimensions: false,
-            svgoConfig: {
-              multipass: true,
-              plugins: [
-                'removeDimensions',
-                'removeOffCanvasPaths',
-                'reusePaths',
-                'removeElementsByAttr',
-                'removeStyleElement',
-                'removeScriptElement',
-                'prefixIds',
-                'cleanupIDs',
-                {
-                  name: 'cleanupNumericValues',
-                  params: {
-                    floatPrecision: 1,
-                  },
-                },
-                {
-                  name: 'convertPathData',
-                  params: {
-                    floatPrecision: 1,
-                  },
-                },
-                {
-                  name: 'convertTransform',
-                  params: {
-                    floatPrecision: 1,
-                  },
-                },
-                {
-                  name: 'cleanupListOfValues',
-                  params: {
-                    floatPrecision: 1,
-                  },
-                },
-              ],
-            },
-          },
-        },
-      ],
-    });
 
+  experimental: {
+    serverComponentsExternalPackages: ['mongoose'],
+  },
+  env: {
+    DB_URI: 'mongodb://localhost:27017',
+  },
+  typescript: { ignoreBuildErrors: true },
+  webpack: config => {
+    config.experiments = {
+      topLevelAwait: true,
+      layers: true,
+    };
     return config;
   },
 };

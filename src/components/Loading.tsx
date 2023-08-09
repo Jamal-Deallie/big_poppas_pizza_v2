@@ -1,6 +1,6 @@
 import { CSSProperties } from 'react';
 import styles from '@/styles/components/Loading.module.scss';
-
+import cn from 'classnames';
 export interface ILoading extends CSSProperties {
   border: string;
 }
@@ -8,7 +8,7 @@ export interface ILoading extends CSSProperties {
 export default function Loading({ border }: ILoading) {
   return (
     <div
-      className={styles['loading']}
+      className={cn(styles['loading'], 'm-lg-auto m-sm-auto')}
       style={
         {
           '--border': border,

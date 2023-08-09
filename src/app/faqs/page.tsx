@@ -1,11 +1,14 @@
-import React from 'react';
 import Accordions from '@/containers/Accordions';
-type Props = {};
 
-export default function page({}: Props) {
+export const metadata = {
+  title: 'Frequently Asked Questions',
+  description: 'Faqs about Big Poppas Pizza',
+};
+
+export default function page() {
   return (
-    <div>
+    <section>
       <Accordions />
-    </div>
+    </section>
   );
 }

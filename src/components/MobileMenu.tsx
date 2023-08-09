@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useEffect, useState, useCallback } from 'react';
+import { useRef } from 'react';
 import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayout';
 import { gsap } from 'gsap';
 import Link from 'next/link';
@@ -85,7 +85,7 @@ export default function Menus() {
       <div className={styles.menu} ref={root}>
         <div className='grid-inner'>
           <div className={styles['link-cont']}>
-            <ul className='lg-py-12 sm-pt-12'>
+            <ul className='pt-sm-128'>
               <li className='link-item'>
                 <Link className={styles['link']} href='/about'>
                   About

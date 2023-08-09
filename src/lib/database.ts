@@ -12,14 +12,12 @@ const options: any = {
 
 export const connectToDatabase = async () => {
   if (!connection.readyState) {
-    console.log('Connecting to ', MONGODB_URI);
     connect(MONGODB_URI, options);
   }
 };
 
 export async function closeDatabase() {
   await connection.close();
-  console.log('Disconnected to db.');
 }
 
 export async function getCategoryProducts(

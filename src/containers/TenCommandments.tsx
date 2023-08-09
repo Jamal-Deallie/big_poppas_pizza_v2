@@ -10,7 +10,7 @@ export default function TenCommandments({}: Props) {
   return (
     <section className={cn(styles['commandments'], 'tertiary-theme')}>
       <div className='main-cont'>
-        <div className='sm-py-7 lg-py-16'>
+        <div className='py-sm-64 py-lg-128'>
           <div className={styles['title-cont']}>
             <div className={styles['doodle-cont']}>
               <RandomDoodles />
@@ -19,7 +19,7 @@ export default function TenCommandments({}: Props) {
               {`IT’S`} ALL GOOD BABY BABY
             </h1>
           </div>
-          <div className={cn(styles['card-cont'], 'sm-mt-6 lg-mt-10')}>
+          <div className={cn(styles['card-cont'], 'mt-sm-48 mt-lg-96')}>
             <div className='grid-inner'>
               {commandmentItems.map(
                 ({ id, title, icon, commandment, reverse }) => (

@@ -20,12 +20,12 @@ export const support = [
   {
     id: 3,
     label: 'privacy policy',
-    path: '/privacy policy',
+    path: '/privacypolicy',
   },
   {
     id: 4,
     label: 'sitemap',
-    path: '/sitemap',
+    path: '/sitemap.xml',
   },
 ];
 

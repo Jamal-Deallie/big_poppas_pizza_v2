@@ -1,7 +1,5 @@
 @use '../base/functions' as *;
 
-.card {
-}
 .inner {
   display: flex;
   align-items: center;
@@ -9,13 +7,15 @@
   position: relative;
   border: 2.5px solid var(--secondary-variant);
   aspect-ratio: 4 / 5;
+  max-width: mobile-vw(300px);
   width: 100%;
   height: auto;
   padding: mobile-vw(8px);
   margin-inline: center;
   @include desktop {
     border: 3px solid var(--secondary-variant);
-
+    max-width: desktop-vw(450px);
+    width: 100%;
     padding: desktop-vw(24px);
   }
 }
@@ -36,6 +36,7 @@
 }
 
 .details {
+  max-width: mobile-vw(300px);
   width: 100%;
 
   span {
@@ -47,10 +48,11 @@
   span:nth-of-type(1) {
     font-family: var(--heading-font);
     line-height: calc(2px + 2ex + 2px);
-
   }
 
   @include desktop {
+    max-width: desktop-vw(450px);
+    width: 100%;
     span {
       font-size: desktop-vw(20px);
     }

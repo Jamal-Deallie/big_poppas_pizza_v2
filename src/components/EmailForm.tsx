@@ -16,10 +16,10 @@ function EmailForm({ title, desc }: { title: string; desc: string }) {
   return (
     <div className={styles['form']}>
       <h1 className='clr-tertiary title-xs'>{title}</h1>
-      <div>
-        <p className='txt sm-my-1 lg-my-1 clr-tertiary'>{desc}</p>
+      <div className='mt-sm-8 mt-lg-8 clr-tertiary'>
+        <p className='txt'>{desc}</p>
       </div>
-      <form className={cn(styles['email-input'], 'sm-mt-2 lg-mt-2')}>
+      <form className={cn(styles['email-input'], 'mt-sm-24 mt-lg-24')}>
         <input
           type='email'
           placeholder='Enter your email address'

@@ -5,7 +5,7 @@ interface LayoutProps {
   title?: string;
   titleCn?: string;
   layoutCn?: string;
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 export default function GridLayout({

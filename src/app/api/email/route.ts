@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
-
 import WelcomeEmail from '@/emails/Welcome';
 
 const resend = new Resend(process.env.RESEND_API_KEY);

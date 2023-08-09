@@ -64,7 +64,7 @@ export default function FadeInCarousel({ data }: FadeInLoopProps) {
 
   return (
     <div className='main-cont'>
-      <div ref={root} className={cn(styles['reviews'], 'sm-mt-7 lg-mt-7')}>
+      <div ref={root} className={cn(styles['reviews'], 'mt-sm-48 mt-lg-64')}>
         <div className={styles['wrapper']}>
           {data.map(({ src, alt, id }) => {
             return (
@@ -82,7 +82,7 @@ export default function FadeInCarousel({ data }: FadeInLoopProps) {
             );
           })}
         </div>
-        <div className={cn(styles['button-row'], 'sm-mt-2 lg-mt-2')}>
+        <div className={cn(styles['button-row'], 'mt-sm-24 mt-lg-24')}>
           {data.map(({ id }) => {
             return (
               <button

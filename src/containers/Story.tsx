@@ -6,7 +6,7 @@ type Props = {};
 export default function Story({}: Props) {
   return (
     <section className={cn('primary-theme', styles['story'])}>
-      <div className='sm-py-7 lg-py-16'>
+      <div className='py-sm-64 py-lg-128'>
         <div>
           <div className={styles['title']}>
             <h1 className='title-lg tac clr-tertiary'>I Got A Story To Tell</h1>
@@ -48,7 +48,7 @@ export default function Story({}: Props) {
                     'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1683002349/big_poppas/signature_h5rlvp.svg'
                   }
                   sizes='(max-width: 768px) 100vw)'
-                  alt='Voletta Wallace'
+                  alt='Voletta Wallace Signature'
                 />
               </div>
               <div>
@@ -64,7 +64,7 @@ export default function Story({}: Props) {
                   src={
                     'https://res.cloudinary.com/dtwk4dm3g/image/upload/v1683002349/big_poppas/voletta_wallace_aqekgf.jpg'
                   }
-                  sizes='(max-width: 768px) 100vw)'
+                  sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                   alt='Voletta Wallace'
                 />
               </div>
