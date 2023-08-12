@@ -15,7 +15,12 @@ export default function Review({ name, review }: ReviewProps) {
         <div className={styles['inner']}>
           <div className={styles['content']}>
             <div className={styles['stars']}>
-              <FiveStars />
+              <Image
+                src='https://res.cloudinary.com/dtwk4dm3g/image/upload/v1691819465/big_poppas/iconly_svg_optimized-optimized_q25qm0.svg'
+                fill
+                alt='five stars'
+                sizes='(min-width: 850px) 10vw, 8vw, (max-width: 849px) 50vw'
+              />
             </div>
             <div className='clr-tertiary'>
               <p className='mt-sm-16 mt-lg-24 txt-md'>{review}</p>

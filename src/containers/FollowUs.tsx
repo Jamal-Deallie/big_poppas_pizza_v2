@@ -8,12 +8,14 @@ import Image from 'next/image';
 import { ctaImages as images } from '@/data/data';
 import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayout';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 export default function FollowUs() {
   const tl = useRef<gsap.core.Timeline>(null!);
   const root = useRef(null!);
 
   useIsomorphicLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     const mm = gsap.matchMedia(root);
     mm.add(
       '(min-width: 850px)',

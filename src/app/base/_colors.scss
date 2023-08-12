@@ -18,7 +18,5 @@ $colors: (
 }
 
 :root {
-  @each $name, $color in $colors {
-    --#{$name}-variant: #{$color};
-  }
+
 }

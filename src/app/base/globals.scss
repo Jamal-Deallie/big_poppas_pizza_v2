@@ -1,0 +1,71 @@
+@import './_functions.scss';
+@import './_reset.scss';
+@import './_media.scss';
+@import './_colors.scss';
+@import './_utilities.scss';
+@import './_font-style.scss';
+@import './_layouts.scss';
+@import './_spacing.scss';
+
+body {
+  min-height: 100vh;
+  color: var(--secondary-variant);
+  background-color: var(--secondary-variant);
+  font-family: var(--body-font);
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+.marquee {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.loop-item {
+  @include desktop {
+    position: relative;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    will-change: transform;
+  }
+}
+
+.react-datepicker-wrapper {
+  min-width: 100% !important;
+}
+
+.react-datepicker__input-container {
+  min-width: 100%;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.react-datepicker__calendar-icon {
+  width: 20px;
+  order: 2;
+}
+
+.react-datepicker__aria-live {
+  display: none;
+}
+
+:root {
+  --nav-height: #{mobile-vw(65px)};
+  --input-focus-h: 245;
+  --input-focus-s: 100%;
+  --input-focus-l: 42%;
+  --input-border: #000;
+  @include desktop {
+    --nav-height: #{desktop-vw(90px)};
+  }
+  @each $name, $color in $colors {
+    --#{$name}-variant: #{$color};
+  }
+}

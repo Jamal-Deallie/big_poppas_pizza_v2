@@ -1,28 +1,31 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayout';
 import { gsap } from 'gsap';
-import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
-import cn from 'classnames';
 import { menuLinks } from '@/data/linkItems';
-import styles from '@/styles/components/Menu.module.scss';
 import { LinkAccordion } from './LinkAccordion';
-import { useStore } from '@/lib/store';
-import { shallow } from 'zustand/shallow';
+import cn from 'classnames';
+import Link from 'next/link';
+import useLockedBody from '@/hooks/useLockedBody';
+import styles from '@/styles/components/Menu.module.scss';
 
 export default function Menus() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const root = useRef(null!);
-  const openShopMenu = () => setNavIsOpen(!navIsOpen);
-  const [navIsOpen, setNavIsOpen] = useStore(
-    ({ navIsOpen, setNavIsOpen }) => [navIsOpen, setNavIsOpen],
-    shallow
-  );
+  const [navIsOpen, setNavIsOpen] = useState(false);
+  const [locked, setLocked] = useLockedBody(false, 'root');
+
+  const openNav = () => {
+    setNavIsOpen(!navIsOpen);
+    setLocked(!locked);
+  };
+
   useIsomorphicLayoutEffect(() => {
     setNavIsOpen(false);
+    setLocked(false);
   }, [pathname, searchParams]);
 
   const tl = useRef<gsap.core.Timeline | null>(null);
@@ -76,7 +79,7 @@ export default function Menus() {
       <div className={styles['btn-cont']}>
         <div
           role='button'
-          onClick={() => setNavIsOpen(!navIsOpen)}
+          onClick={openNav}
           className={cn('title-sm btn-item', styles['btn'])}>
           Menu
         </div>

@@ -1,4 +1,4 @@
-@use '../base/functions' as *;
+@use '../../app/base/functions' as *;
 
 .review {
   display: inline-block;
@@ -32,20 +32,17 @@
 }
 
 .stars {
-  display: flex;
-  svg {
-    aspect-ratio: 280.72/328.93;
+  position: relative;
+  aspect-ratio: 1505/331;
+  height: auto;
+  width: mobile-vw(150px);
+  img {
+    width: 100%;
     height: auto;
-    width: mobile-vw(30px);
+    object-fit: contain;
   }
-
   @include desktop {
-    gap: desktop-vw(5px);
-
-    svg {
-      height: auto;
-      width: desktop-vw(30px);
-    }
+    width: desktop-vw(200px);
   }
 }
 

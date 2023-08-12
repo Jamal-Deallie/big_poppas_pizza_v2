@@ -1,7 +1,6 @@
 'use client';
 import { useState, useCallback } from 'react';
 import Modal from '@/components/Modal';
-import { useLenis } from '@studio-freight/react-lenis';
 import ReservationForm from '@/components/ReservationForm';
 import { Button } from '@/components/Button/Button';
 import styles from '@/styles/containers/Reservation.module.scss';

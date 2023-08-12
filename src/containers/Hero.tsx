@@ -4,6 +4,8 @@ import cn from 'classnames';
 import Reservation from '@/containers/Reservation';
 import Accent from '@/svgs/Accent';
 import UnderlineAccent from '@/svgs/UnderlineAccent';
+import { Suspense } from 'react';
+import Loading from '@/components/Loading';
 
 export default function Hero() {
   return (
@@ -15,8 +17,8 @@ export default function Hero() {
             alt='Hero'
             fill
             quality={90}
-            sizes='(max-width: 1300px) 75vw, 100vw, (max-width: 800px) 100vw'
-            priority
+            sizes='(min-width: 850px) 75vw, 100vw, (max-width: 849px) 33vw'
+            priority={true}
           />
         </div>
         <div className={styles['cta']}>
@@ -25,7 +27,9 @@ export default function Hero() {
               <div className={styles['accent-svg']}>
                 <Accent />
               </div>
-              <h1 className='title-heading clr-primary border'>We Love The Dough</h1>
+              <h1 className='title-heading clr-primary border'>
+                We Love The Dough
+              </h1>
               <div className={styles['underline-svg']}>
                 <UnderlineAccent />
               </div>

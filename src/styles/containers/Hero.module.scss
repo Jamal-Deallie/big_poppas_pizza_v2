@@ -1,4 +1,4 @@
-@use '../base/functions' as *;
+@use '../../app/base/functions' as *;
 
 .hero {
   @include mobile {
@@ -74,7 +74,7 @@
     .inner {
       @include flexbox($direction: column, $justifyContent: center);
       height: 100%;
-      width: desktop-vw(850px);
+      width: desktop-vw(900px);
 
       .desc {
         display: block;
@@ -123,12 +123,7 @@
   aspect-ratio: 253.295/24.372;
   position: absolute;
   bottom: 0;
-  right: 0;
-
-  svg {
-    height: mobile-vw(18px);
-    width: auto;
-  }
+  right: desktop-vw(50px);
   @include mobile {
     display: none;
   }

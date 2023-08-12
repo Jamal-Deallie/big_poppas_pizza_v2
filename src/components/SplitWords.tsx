@@ -12,11 +12,12 @@ type AnimationProps = {
 };
 
 export default function SplitWords({ children, start }: AnimationProps) {
-  gsap.registerPlugin(SplitText);
+
   const root = useRef<HTMLDivElement>(null!);
   const tl = useRef<gsap.core.Timeline>(null!);
 
   useIsomorphicLayoutEffect(() => {
+    gsap.registerPlugin(SplitText);
     const mm = gsap.matchMedia(root);
 
     mm.add('(min-width: 850px)', () => {

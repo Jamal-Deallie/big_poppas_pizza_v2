@@ -1,4 +1,4 @@
-@use '../base/functions' as *;
+@use '../../app/base/functions' as *;
 
 .item {
   cursor: pointer;
@@ -8,7 +8,7 @@
 }
 
 .item:last-child {
-//   border-bottom: 2.5px solid;
+  //   border-bottom: 2.5px solid;
 }
 
 .title {

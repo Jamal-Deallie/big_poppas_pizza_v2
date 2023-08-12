@@ -14,10 +14,6 @@ html {
   font-smooth: antialiased; /* 3 */
   -moz-osx-font-smoothing: grayscale; /* 3 */
   scrollbar-width: thin;
-  background-image: var(--bg-gradient);
-  &.lenis-stopped {
-    overflow: hidden;
-  }
 }
 
 html,
