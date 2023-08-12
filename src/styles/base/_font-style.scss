@@ -20,7 +20,7 @@ h1,
 h2 {
   font-family: var(--heading-font), sans-serif;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 800;
   font-style: normal;
   letter-spacing: 1px;
   line-height: 86%;
@@ -48,32 +48,37 @@ p {
   line-height: 125%;
 }
 
-.text {
-  font-weight: 400;
-  letter-spacing: -0.03em;
-  font-size: mobile-vw(12px);
-
-  @include desktop {
-    font-size: desktop-vw(16px);
-    line-height: 133%;
-  }
-}
-
-.text-sm {
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  text-transform: uppercase;
-  font-size: mobile-vw(14px);
-
-  @include desktop {
-    font-size: desktop-vw(14px);
-    line-height: 114%;
-  }
-}
-
 .split-child {
   display: inline-block;
   opacity: 1;
+}
+
+.title-heading {
+  font-size: mobile-vw(map-get($font-sizes, '9'));
+  line-height: 0.88;
+  text-transform: uppercase;
+  font-family: var(--heading-font), sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: 1px;
+
+  @include mobile {
+    text-align: center;
+  }
+  @include desktop {
+    font-size: desktop-vw(map-get($font-sizes, '13'));
+    line-height: 0.88;
+    letter-spacing: -0.5px;
+  }
+
+  &.border {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--secondary-variant);
+    @include desktop {
+      -webkit-text-stroke-width: 2.75px;
+      -webkit-text-stroke-color: var(--secondary-variant);
+    }
+  }
 }
 
 .title-lg {

@@ -60,7 +60,7 @@ export default function DesktopMenu({ setIsMenuOpen, isMenuOpen }: MenuProps) {
     }, root);
 
     return () => ctx.revert();
-  }, []);
+  }, [root, bgRef]);
 
   useIsomorphicLayoutEffect(() => {
     if (tl.current) {

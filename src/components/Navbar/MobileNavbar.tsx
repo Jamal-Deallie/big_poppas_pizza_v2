@@ -1,14 +1,11 @@
 'use client';
 
-import { useRef } from 'react';
-import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayout';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Reservation from '@/containers/Reservation';
 import Menu from '@/components/MobileMenu';
 import styles from '@/styles/components/MobileNavbar.module.scss';
 import cn from 'classnames';
 import Logo from '@/svgs/Logo';
+import Link from 'next/link';
 
 export default function MobileNavbar() {
   return (
@@ -18,10 +15,13 @@ export default function MobileNavbar() {
           <div className='ml-sm-16'>
             <Menu />
           </div>
-
-          <div className={cn(styles['logo'], 'center')}>
-            <Logo />
-          </div>
+          <Link
+            href='/'
+            aria-label='Big Poppas Pizza Logo. Click to navigate to home page'>
+            <div className={cn(styles['logo'], 'center')}>
+              <Logo />
+            </div>
+          </Link>
           <div className='mr-sm-16'>
             <Reservation as='icon' />
           </div>

@@ -19,8 +19,8 @@ export default function Intro({}: Props) {
               Indulge in the pizza revolution with us.
             </p>
             <div className='mt-sm-24 mt-lg-24'>
-              <LinkButton variant={'secondary'} size={'lg'} href={'about'}>
-                Learn More
+              <LinkButton variant={'secondary'} size={'lg'} href={'/about'}>
+                About Us
               </LinkButton>
             </div>
           </div>

@@ -5,6 +5,7 @@ $colors: (
   'secondary': #000,
   'tertiary': #fff,
   'ghost': transparent,
+  'disabled': #a0aec0,
 );
 
 @each $name, $color in $colors {

@@ -6,8 +6,8 @@
   height: auto;
   width: 100%;
   padding: mobile-vw(8px);
-
   @include desktop {
+    will-change: transform;
     aspect-ratio: 3/2;
     width: desktop-vw(450px);
     height: auto;

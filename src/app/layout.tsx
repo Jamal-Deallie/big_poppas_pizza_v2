@@ -4,12 +4,16 @@ import Lenis from '@/components/Lenis';
 import '@/styles/base/globals.scss';
 import RouterMounting from '@/components/RouterMounting';
 
-const { SITE_NAME } = process.env;
+const { SITE_NAME, SITE_DESCRIPTION } = process.env;
 
 export const metadata = {
   title: {
     default: SITE_NAME,
     template: `%s | ${SITE_NAME}`,
+  },
+
+  description : {
+default: SITE_DESCRIPTION,
   },
   robots: {
     follow: true,

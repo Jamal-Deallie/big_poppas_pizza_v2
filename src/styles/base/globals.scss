@@ -160,48 +160,6 @@ img {
   display: none;
 }
 
-.react-select-container {
-  min-width: 100%;
-  color: var(--secondary-variant);
-
-  font-size: mobile-vw(16px);
-  border-radius: 4px;
-  border: none;
-
-  .react-select__control {
-    padding: mobile-vw(8px) mobile-vw(8px);
-    border: 2.5px solid var(--secondary-variant);
-    background-color: var(--tertiary-variant);
-  }
-  .react-select__value-container {
-    padding: 0;
-  }
-  .react-select__menu {
-    font-size: mobile-vw(16px);
-  }
-  &::placeholder {
-    color: var(--secondary-variant);
-  }
-
-  @include desktop {
-    .react-select__control {
-      min-height: desktop-vw(48px);
-      padding: desktop-vw(8px) desktop-vw(8px);
-      font-size: desktop-vw(19px);
-    }
-    .react-select__menu {
-      font-size: desktop-vw(19px);
-    }
-  }
-}
-
-.disf {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-
 :root {
   --nav-height: #{mobile-vw(65px)};
   --input-focus-h: 245;

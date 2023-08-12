@@ -1,6 +1,9 @@
 @use '../base/functions' as *;
 
 .hero {
+  @include mobile {
+    margin-top: var(--nav-height);
+  }
   @include desktop {
     padding-bottom: desktop-vw(40px);
   }
@@ -13,7 +16,7 @@
 
   @include mobile {
     min-height: $mobile-height;
-    height: 100vh;
+    height: calc(90vh - var(--nav-height));
   }
   @include desktop {
     padding-inline: desktop-vw(40px);
@@ -29,7 +32,7 @@
   width: 100%;
   @include mobile {
     min-height: $mobile-height;
-    height: 100vh;
+    height: calc(90vh - var(--nav-height));
   }
   @include desktop {
     min-height: 600px;
@@ -59,60 +62,11 @@
 
 .cta {
   position: absolute;
-
-  .inner {
-    .title {
-      .underline {
-        width: fit-content;
-        position: relative;
-        @include mobile {
-          padding-bottom: mobile-vw(12px);
-        }
-        &::after {
-          content: '';
-          aspect-ratio: 253.295 / 24.372;
-          position: absolute;
-          right: 100%;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: auto;
-          background-image: url('https://res.cloudinary.com/dtwk4dm3g/image/upload/v1683002654/big_poppas/underline_migghm.svg');
-          background-size: cover;
-          background-position: 50%;
-          background-repeat: no-repeat;
-          transition: all 0.3s;
-        }
-      }
-      @include mobile {
-        .accent {
-          width: fit-content;
-          position: relative;
-          padding-bottom: 7.5px;
-          &::after {
-            content: '';
-            aspect-ratio: 49.202 / 44.418;
-            position: absolute;
-            top: mobile-vw(-8px);
-            left: mobile-vw(-18px);
-            width: mobile-vw(25px);
-            height: auto;
-            background-image: url('https://res.cloudinary.com/dtwk4dm3g/image/upload/v1683002654/big_poppas/accent_do5b5w.svg');
-            background-size: cover;
-            background-position: 50%;
-            background-repeat: no-repeat;
-            transition: all 0.3s;
-          }
-        }
-      }
-    }
-  }
-
   @include mobile {
     top: 45%;
     .inner {
       @include flexbox($direction: column, $alignContent: center);
-      padding: mobile-vw(24px) mobile-vw(16px) mobile-vw(48px) mobile-vw(16px);
+      padding-inline: mobile-vw(16px);
     }
   }
   @include desktop {
@@ -120,75 +74,78 @@
     .inner {
       @include flexbox($direction: column, $justifyContent: center);
       height: 100%;
-      width: desktop-vw(700px);
-      padding-inline: desktop-vw(64px);
+      width: desktop-vw(850px);
+
       .desc {
         display: block;
         max-width: desktop-vw(550px);
-        margin: desktop-vw(32px) 0 desktop-vw(32px);
-      }
-    }
-    .underline {
-      padding-bottom: desktop-vw(24px);
-    }
-    .accent {
-      width: fit-content;
-      position: relative;
-      padding-bottom: 7.5px;
-      &::after {
-        content: '';
-        aspect-ratio: 49.202 / 44.418;
-        position: absolute;
-        top: desktop-vw(-8px);
-        left: desktop-vw(-35px);
-        width: desktop-vw(45px);
-        height: auto;
-        background-image: url('https://res.cloudinary.com/dtwk4dm3g/image/upload/v1683002654/big_poppas/accent_do5b5w.svg');
-        background-size: cover;
-        background-position: 50%;
-        background-repeat: no-repeat;
-        transition: all 0.3s;
+        padding-left: desktop-vw(40px);
       }
     }
   }
 }
+
+.title {
+  display: block;
+  position: relative;
+
+  @include desktop {
+    width: 100%;
+    @include flexbox;
+    h1 {
+      margin-top: desktop-vw(16px);
+    }
+  }
+}
+
+.accent-svg {
+  aspect-ratio: 49.202/44.418;
+  height: mobile-vw(20px);
+  svg {
+    height: mobile-vw(20px);
+    width: auto;
+  }
+  @include mobile {
+    display: none;
+  }
+  @include desktop {
+    height: desktop-vw(30px);
+    width: auto;
+
+    svg {
+      height: desktop-vw(32px);
+      width: auto;
+    }
+  }
+}
+
+.underline-svg {
+  aspect-ratio: 253.295/24.372;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  svg {
+    height: mobile-vw(18px);
+    width: auto;
+  }
+  @include mobile {
+    display: none;
+  }
+  @include desktop {
+    padding-top: desktop-vw(16px);
+    height: desktop-vw(30px);
+    width: auto;
+
+    svg {
+      height: desktop-vw(45px);
+      width: auto;
+    }
+  }
+}
+
 .btn-cont {
-  @include mobile {
-    margin-top: mobile-vw(32px);
-  }
-}
-
-.hero-title {
-  font-size: mobile-vw(40px);
-  line-height: 0.9;
-  text-transform: uppercase;
-  font-family: var(--heading-font), sans-serif;
-  font-weight: 800;
-  font-style: normal;
-  color: var(--primary-variant);
-  text-align: center;
-  -webkit-text-stroke-width: 1.75px;
-  -webkit-text-stroke-color: var(--secondary-variant);
-  @include mobile {
-    margin-right: mobile-vw(12px);
-  }
   @include desktop {
-    text-align: left;
-    font-size: desktop-vw(95.37px);
-    line-height: 0.88;
-    letter-spacing: -1.5px;
-    -webkit-text-stroke-width: 2.75px;
-  }
-}
-
-.hero-title + .hero-title {
-  display: flex;
-  gap: mobile-vw(12px);
-  @include mobile {
-    justify-content: center;
-    margin-right: mobile-vw(0px);
-  }
-  @include desktop {
-    gap: desktop-vw(12px);
+    padding-left: desktop-vw(40px);
   }
 }

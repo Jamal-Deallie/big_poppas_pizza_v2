@@ -8,7 +8,15 @@ interface IBaseButton {
   block?: boolean;
 }
 export interface ILinkButtonProps extends IBaseButton, LinkProps {
-  href: string;
+  href:
+    | string
+    | {
+        pathname: string;
+        query: {
+          page: number;
+          search?: string;
+        };
+      };
   children: ReactNode;
 }
 
@@ -33,4 +41,8 @@ export interface IProduct {
   image: string;
   spicy: boolean;
   createdAt: Date;
+}
+export interface IProductResponse {
+  metadata: [{ totalCount: number }];
+  data: IProduct[];
 }

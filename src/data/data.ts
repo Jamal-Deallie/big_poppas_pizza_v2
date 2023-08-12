@@ -32,19 +32,19 @@ export const support = [
 export const deskMenuLinks = [
   {
     id: 1,
-    path: '/search/pizza',
+    path: '/menu/pizza',
     label: 'pizza',
     src: 'https://res.cloudinary.com/dtwk4dm3g/video/upload/v1689554844/big_poppas/pizza-menu_dqi1wf.mp4',
   },
   {
     id: 2,
-    path: '/search/drinks',
+    path: '/menu/drinks',
     label: 'drinks',
     src: 'https://res.cloudinary.com/dtwk4dm3g/video/upload/v1689554845/big_poppas/drinks-menu_o5xnzv.mp4',
   },
   {
     id: 3,
-    path: '/search/dessert',
+    path: '/menu/dessert',
     label: 'dessert',
     src: 'https://res.cloudinary.com/dtwk4dm3g/video/upload/v1689554836/big_poppas/dessert-menu_nwogqc.mp4',
   },

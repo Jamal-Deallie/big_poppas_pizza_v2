@@ -23,6 +23,13 @@ $themes: (
     outline: var(--secondary-variant),
     border: var(--secondary-variant),
   ),
+  disabled: (
+    bg: var(--disabled-variant),
+    text: #e2e8f0,
+    shadow: none,
+    outline: none,
+    border: #e2e8f0,
+  ),
 );
 
 @mixin button-color-theme($theme) {
@@ -116,4 +123,8 @@ $themes: (
 }
 .tertiary-variant {
   @include button-color-theme(tertiary);
+}
+.disabled-variant {
+  @include button-color-theme(disabled);
+  pointer-events: none;
 }

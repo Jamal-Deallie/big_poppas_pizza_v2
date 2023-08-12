@@ -13,6 +13,7 @@
   }
   @include desktop {
     min-height: 90vh;
+    will-change: transform opacity transform;
   }
 }
 
@@ -95,6 +96,10 @@
   grid-column: 1/-1;
   text-align: center;
   z-index: 1;
+
+  @include desktop {
+    will-change: transform opacity transform;
+  }
 }
 
 .border-top {

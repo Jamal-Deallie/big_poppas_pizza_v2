@@ -1,7 +1,7 @@
 'use client';
 
 import styles from '@/styles/containers/Marquee.module.scss';
-import MarqueeText from '@/components/MarqueeText';
+import { MarqueeText } from '@/components/MarqueeText';
 import cn from 'classnames';
 import SmileyFace from '@/svgs/SmileyFace';
 
@@ -38,13 +38,12 @@ export default function Marquee({
     <MarqueeText reverse={reverse}>
       <div className={styles['text-marquee']}>
         <div className={cn(styles['text-single'], 'txt-wrapper')}>
-          {new Array(repeat).fill(<Text />).map((_, i) => {
-            return (
-              <span className={cn(styles['text'], 'scroll-txt')} key={i}>
-                <Text />
-              </span>
-            );
-          })}
+          <span className={cn(styles['text'], 'scroll-txt')}>
+            <Text />
+          </span>
+          <span className={cn(styles['text'], 'scroll-txt')}>
+            <Text />
+          </span>
         </div>
       </div>
     </MarqueeText>

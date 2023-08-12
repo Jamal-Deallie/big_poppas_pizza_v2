@@ -1,21 +1,22 @@
 import Marquee from '@/containers/Marquee';
 import styles from '@/styles/containers/Delivery.module.scss';
-import Image from 'next/image';
+import { Desktop } from '@/components/MediaQueryEasyMode';
 import cn from 'classnames';
 import PizzaCutter from '@/svgs/PizzaCutter';
 
 export default function Delivery() {
   return (
     <div className={cn(styles['delivery'], 'bg-secondary')}>
-      <div className={cn(styles['marquee-cont'], 'bg-primary')}>
-        <Marquee repeat={10} reverse={true} />
-        <Marquee repeat={10} />
-        <Marquee repeat={10} reverse={true} />
-        <Marquee repeat={10} />
-        <Marquee repeat={10} reverse={true} />
-        <Marquee repeat={10} />
-   
-      </div>
+      <Desktop>
+        <div className={cn(styles['marquee-cont'], 'bg-primary')}>
+          <Marquee repeat={10} reverse={true} />
+          <Marquee repeat={10} />
+          <Marquee repeat={10} reverse={true} />
+          <Marquee repeat={10} />
+          <Marquee repeat={10} reverse={true} />
+          <Marquee repeat={10} />
+        </div>
+      </Desktop>
       <div
         className={cn(
           styles['content'],
@@ -24,7 +25,7 @@ export default function Delivery() {
         <div className={cn(styles['doodle'], 'py-lg-32 py-sm-16')}>
           <PizzaCutter />
         </div>
-        <div className={cn( styles['text-cont'], 'px-lg-40 px-sm-16 pb-sm-64' )}>
+        <div className={cn(styles['text-cont'], 'px-lg-40 px-sm-16 pb-sm-64')}>
           <h1 className='title-lg tac'>Online delivery</h1>
           <p className='txt-md mt-lg-24 mt-sm-16 sm-tac'>
             Hungry for a delicious meal without leaving your home? Order food

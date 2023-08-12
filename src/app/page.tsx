@@ -1,4 +1,3 @@
-import { Suspense } from 'react';
 import Intro from '@/containers/Intro';
 import Hero from '@/containers/Hero';
 import Feature from '@/containers/Feature';

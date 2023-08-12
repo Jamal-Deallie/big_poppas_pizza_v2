@@ -5,19 +5,17 @@ import MarqueeLoop from '@/components/MarqueeLoop';
 import { reviewItems } from '@/data/reviewItems';
 import cn from 'classnames';
 import styles from '@/styles/containers/Reviews.module.scss';
-import { useMediaQuery } from '@/hooks/useMediaQuery';
+import { Desktop, TabletAndBelow } from '@/components/MediaQueryEasyMode';
 
 export default function Reviews() {
-  const matches = useMediaQuery('(min-width: 801px)');
-
   return (
     <section className={cn('secondary-theme', styles['reviews'])}>
-    <div className='py-sm-64 py-lg-128'>
-        <div className='main-cont'>
-          <div className={styles['title-cont']}>
+      <div className='py-sm-64 py-lg-128'>
+        <div>
+          <div className={cn(styles['title-cont'], 'main-cont')}>
             <h1 className='title-lg tac'>The Reviews Are In</h1>
           </div>
-          {matches ? (
+          <Desktop>
             <div className='mt-sm-64 mt-lg-96'>
               <div>
                 <MarqueeLoop>
@@ -42,13 +40,14 @@ export default function Reviews() {
                 </MarqueeLoop>
               </div>
             </div>
-          ) : (
-            <div className='loop-item mt-sm-64 mt-lg-96'>
+          </Desktop>
+          <TabletAndBelow>
+            <div className='main-cont mt-sm-64 mt-lg-96'>
               {reviewItems.slice(0, 3).map(({ id, name, review }) => (
                 <Review name={name} review={review} key={id} />
               ))}
             </div>
-          )}
+          </TabletAndBelow>
         </div>
       </div>
     </section>

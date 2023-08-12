@@ -7,7 +7,6 @@ import Logo from '@/svgs/Logo';
 import cn from 'classnames';
 import Reservation from '@/containers/Reservation';
 import styles from '@/styles/components/DesktopNavbar.module.scss';
-
 import DesktopMenu from '@/components/DesktopMenu';
 type Props = {};
 
@@ -19,7 +18,9 @@ export default function DesktopNavbar({}: Props) {
       <nav className={cn('bg-secondary hide-mobile', styles['container'])}>
         <div className={styles['wrap']}>
           <div className={styles['logo-wrap']}>
-            <Link href='/'>
+            <Link
+              href='/'
+              aria-label='Big Poppas Pizza Logo. Click to navigate to home page'>
               <div className={styles['logo']}>
                 <Logo />
               </div>
@@ -36,7 +37,7 @@ export default function DesktopNavbar({}: Props) {
               <div
                 className={styles['wrap-link']}
                 onClick={() => setIsMenuOpen(isMenuOpen => !isMenuOpen)}>
-                <NavLink href='#' url='#'>
+                <NavLink href='#' url='#' scroll={false}>
                   Menu
                 </NavLink>
               </div>

@@ -20,6 +20,7 @@ export async function generateMetadata({
     description: `Big Poppas ${params.category}s`,
   };
 }
+
 export default async function CategoryPage({
   params,
   searchParams,
@@ -39,7 +40,7 @@ export default async function CategoryPage({
             <h1 className='title-lg tac'>{`Something went wrong`}</h1>
           ) : (
             <GridLayout
-              title={'Ready to Pie'}
+              title={`Big Poppas ${params.category}`}
               titleCn={'title-lg tac'}
               layoutCn={'mt-sm-64'}>
               {products.map(({ name, image, price, _id }) => {
