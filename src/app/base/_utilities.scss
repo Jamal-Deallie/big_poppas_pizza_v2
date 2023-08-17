@@ -102,6 +102,12 @@
   min-height: calc(100vh - var(--nav-height));
 }
 
+.title-max-w {
+  @include desktop {
+    max-width: desktop-vw(800px);
+  }
+}
+
 .center {
   position: absolute;
   top: 50%;

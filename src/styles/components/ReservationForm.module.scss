@@ -16,19 +16,26 @@
   min-height: 24px;
 }
 
-.flex-cont {
+.grid-cont {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: mobile-vw(8px);
+  .fields {
+    grid-column: span 1;
+  }
+  button {
+    grid-column: span 2;
+  }
   @include desktop {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: desktop-vw(16px);
-    justify-content: space-between;
   }
 }
-
+.radios {
+  grid-column: span 2;
+}
 .radio-group {
   display: grid;
-
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: mobile-vw(8px);
   .radio-cont {
     flex: 1;

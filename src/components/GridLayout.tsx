@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import cn from 'classnames';
 import styles from '@/styles/components/GridLayout.module.scss';
 
 interface LayoutProps {
@@ -16,13 +17,13 @@ export default function GridLayout({
 }: LayoutProps) {
   return (
     <div className={layoutCn}>
-      {title ? (
+      {/* {title ? (
         <div className={styles['title']}>
           <h1 className={titleCn}>{title}</h1>
         </div>
-      ) : null}
+      ) : null} */}
 
-      <div className={styles['layout']}>{children}</div>
+      <div className={cn(styles['layout'], 'grid-inner' )}>{children}</div>
     </div>
   );
 }

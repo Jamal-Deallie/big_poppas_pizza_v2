@@ -93,20 +93,7 @@ export async function getProducts({
       },
     });
   }
-  const products: IProductResponse[] = await Product.aggregate([
-    {
-      $facet: {
-        metadata: [{ $count: 'totalCount' }],
-        data: pipeline,
-      },
-    },
-  ]);
+  const products = await Product.aggregate(pipeline);
 
-  // const products: IProduct[] = await Product.aggregate(pipeline);
-  console.log(products[0].metadata[0].totalCount);
-  console.log(products[0].data);
-  return {
-    count: products[0].metadata[0].totalCount,
-    products: products[0].data,
-  };
+  return products;
 }

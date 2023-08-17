@@ -23,7 +23,7 @@ export default function Card({ src, name, price }: SlideProps) {
         </div>
       </div>
       <div className={cn(styles['details'], 'clr-secondary')}>
-        <span className='tac sm-mt-1 lg-mt-2'>{name}</span>
+        <span className='tac mt-sm-8 mt-lg-16'>{name}</span>
         <span className='tac'>{`$${price}`}</span>
       </div>
     </div>

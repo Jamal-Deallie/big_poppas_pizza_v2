@@ -1,0 +1,31 @@
+@use '../../app/base/functions' as *;
+
+.search {
+  display: flex;
+  border-radius: 3px;
+  overflow: hidden;
+  border: solid 2.5px var(--secondary-variant);
+}
+
+.search-input {
+  flex: 1;
+  color: var(--secondary-variant);
+  padding: mobile-vw(4px) mobile-vw(4px);
+  font-size: mobile-vw(14px);
+  line-height: 1;
+  height: mobile-vw(48px);
+  &::placeholder {
+    color: var(--secondary-variant);
+  }
+
+  @include desktop {
+    height: desktop-vw(48px);
+    padding: desktop-vw(8px) desktop-vw(8px);
+    font-size: desktop-vw(19px);
+  }
+}
+
+.spinner {
+  display: flex;
+  align-items: center;
+}

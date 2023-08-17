@@ -1,12 +1,16 @@
 @use '../../app/base/functions' as *;
 
 .container {
-  height: var(--uib-size);
-  width: var(--uib-size);
+  height: calc(var(--uib-size) * (100vw / 375));
+  width: calc(var(--uib-size) * (100vw / 375));
   vertical-align: middle;
   transform-origin: center;
   animation: rotate var(--uib-speed) linear infinite;
   will-change: transform;
+  @include desktop {
+    height: calc(var(--uib-size) * (100vw / 1440));
+    width: calc(var(--uib-size) * (100vw / 1440));
+  }
 }
 
 .container circle {

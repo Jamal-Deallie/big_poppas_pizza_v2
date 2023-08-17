@@ -7,11 +7,12 @@
   .main-wrap {
     flex-grow: 1;
     min-height: calc(100vh - var(--nav-height));
+    padding-top: var(--nav-height);
   }
 
   @include desktop {
     .main-wrap {
-      margin-top: var(--nav-height);
+      padding-top: var(--nav-height);
     }
   }
 }

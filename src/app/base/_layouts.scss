@@ -1,7 +1,6 @@
 @use 'sass:map';
 
-// config to fill
-// 'variable': (mobile, desktop)
+
 $layout: (
   'columns-count': (
     6,
@@ -17,7 +16,6 @@ $layout: (
   ),
 );
 
-//internal process, do not touch
 :root {
   --layout-columns-count: #{nth(map.get($layout, 'columns-count'), 1)};
   --layout-columns-gap: #{mobile-vw(nth(map.get($layout, 'columns-gap'), 1))};

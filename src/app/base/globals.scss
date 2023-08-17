@@ -37,11 +37,11 @@ img {
 }
 
 .react-datepicker-wrapper {
-  min-width: 100% !important;
+ width: 100% !important;
 }
 
 .react-datepicker__input-container {
-  min-width: 100%;
+  width: 100%;
   display: flex !important;
   align-items: center;
   justify-content: space-between;

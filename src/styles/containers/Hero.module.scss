@@ -1,9 +1,7 @@
 @use '../../app/base/functions' as *;
 
 .hero {
-  @include mobile {
-    margin-top: var(--nav-height);
-  }
+
   @include desktop {
     padding-bottom: desktop-vw(40px);
   }

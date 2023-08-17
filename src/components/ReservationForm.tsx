@@ -9,6 +9,7 @@ import { Input } from '@/components/Input';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import styles from '@/styles/components/ReservationForm.module.scss';
+import cn from 'classnames';
 
 const formatErrors = (errors: Record<string, FieldError>) =>
   Object.keys(errors).map(key => ({
@@ -109,100 +110,101 @@ export default function ReservationForm() {
         <Alert type='error'>There are errors in the form.</Alert>
       )}
 
-      <form onSubmit={handleSubmit(onSubmit)} noValidate>
-        <div className={styles['flex-cont']}>
-          <div className='mt-sm-8 mt-lg-16'>
-            <label htmlFor='firstName_field'>First Name</label>
-            <Input
-              autoComplete='one-time-code'
-              id='firstName_field'
-              type='text'
-              {...register('firstName')}
-              aria-invalid={Boolean(errors.firstName)}
-            />
-            <AlertInput>{errors?.firstName?.message}</AlertInput>
-          </div>
-          <div className='mt-sm-8 mt-lg-16'>
-            <label htmlFor='lastName_field'>Last Name</label>
-            <Input
-              autoComplete='one-time-code'
-              id='lastName_field'
-              type='text'
-              {...register('lastName')}
-              aria-invalid={Boolean(errors.lastName)}
-            />
-            <AlertInput>{errors?.lastName?.message}</AlertInput>
-          </div>
-        </div>
-        <div className={styles['flex-cont']}>
-          <div className='mt-sm-8 mt-lg-16'>
-            <label className={styles['label']} htmlFor='email_field'>
-              Email
-            </label>
-            <Input
-              autoComplete='one-time-code'
-              id='email_field'
-              type='email'
-              {...register('email')}
-              aria-invalid={Boolean(errors.email)}
-            />
-            <AlertInput>{errors?.email?.message}</AlertInput>
-          </div>
-          <div className='mt-sm-8 mt-lg-16'>
-            <label className={styles['label']} htmlFor='phone_field'>
-              Phone Number
-            </label>
-            <Input
-              autoComplete='one-time-code'
-              id='phone_field'
-              type='tel'
-              {...register('phoneNumber')}
-              aria-invalid={Boolean(errors.phoneNumber)}
-            />
-            <AlertInput>{errors?.phoneNumber?.message}</AlertInput>
-          </div>
-        </div>
-        <div className={styles['flex-cont']}>
-          <div className='mt-sm-8 mt-lg-16'>
-            <label className={styles['label']} htmlFor='party_field'>
-              Number of Guest
-            </label>
-            <Input
-              autoComplete='one-time-code'
-              id='party_field'
-              type='number'
-              min={1}
-              max={8}
-              {...register('partySize', { valueAsNumber: true })}
-              aria-invalid={Boolean(errors.partySize)}
-            />
-            <AlertInput>{errors?.partySize?.message}</AlertInput>
-          </div>
-          <div className='mt-sm-8 mt-lg-16'>
-            <label htmlFor='date_field'>Date</label>
-            <Controller
-              control={control}
-              name='date'
-              render={({ field: { value, ...fieldProps } }) => {
-                return (
-                  //@ts-ignore
-                  <DatePicker
-                    autoComplete='one-time-code'
-                    id='date_field'
-                    {...fieldProps}
-                    className='input'
-                    selected={value}
-                    minDate={today}
-                    todayButton={'Today'}
-                  />
-                );
-              }}
-            />
-            <AlertInput>{errors?.date?.message}</AlertInput>
-          </div>
+      <form
+        className={styles['grid-cont']}
+        onSubmit={handleSubmit(onSubmit)}
+        noValidate>
+        <div className={cn(styles['fields'], 'mt-sm-8 mt-lg-16')}>
+          <label htmlFor='firstName_field'>First Name</label>
+          <Input
+            autoComplete='one-time-code'
+            id='firstName_field'
+            type='text'
+            {...register('firstName')}
+            aria-invalid={Boolean(errors.firstName)}
+          />
+          <AlertInput>{errors?.firstName?.message}</AlertInput>
         </div>
 
         <div className='mt-sm-8 mt-lg-16'>
+          <label htmlFor='lastName_field'>Last Name</label>
+          <Input
+            autoComplete='one-time-code'
+            id='lastName_field'
+            type='text'
+            {...register('lastName')}
+            aria-invalid={Boolean(errors.lastName)}
+          />
+          <AlertInput>{errors?.lastName?.message}</AlertInput>
+        </div>
+
+        <div className={cn(styles['fields'], 'mt-sm-8 mt-lg-16')}>
+          <label className={styles['label']} htmlFor='email_field'>
+            Email
+          </label>
+          <Input
+            autoComplete='one-time-code'
+            id='email_field'
+            type='email'
+            {...register('email')}
+            aria-invalid={Boolean(errors.email)}
+          />
+          <AlertInput>{errors?.email?.message}</AlertInput>
+        </div>
+
+        <div className={cn(styles['fields'], 'mt-sm-8 mt-lg-16')}>
+          <label className={styles['label']} htmlFor='phone_field'>
+            Phone Number
+          </label>
+          <Input
+            autoComplete='one-time-code'
+            id='phone_field'
+            type='tel'
+            {...register('phoneNumber')}
+            aria-invalid={Boolean(errors.phoneNumber)}
+          />
+          <AlertInput>{errors?.phoneNumber?.message}</AlertInput>
+        </div>
+
+        <div className={cn(styles['fields'], 'mt-sm-8 mt-lg-16')}>
+          <label className={styles['label']} htmlFor='party_field'>
+            Number of Guest
+          </label>
+          <Input
+            autoComplete='one-time-code'
+            id='party_field'
+            type='number'
+            min={1}
+            max={8}
+            {...register('partySize', { valueAsNumber: true })}
+            aria-invalid={Boolean(errors.partySize)}
+          />
+          <AlertInput>{errors?.partySize?.message}</AlertInput>
+        </div>
+        <div className={cn(styles['fields'], 'mt-sm-8 mt-lg-16')}>
+          <label htmlFor='date_field'>Date</label>
+          <Controller
+            control={control}
+            name='date'
+            render={({ field: { value, ...fieldProps } }) => {
+              return (
+                //@ts-ignore
+                <DatePicker
+                  autoComplete='one-time-code'
+                  id='date_field'
+                  {...fieldProps}
+                  className='input'
+                  selected={value}
+                  minDate={today}
+                  todayButton={'Today'}
+                />
+              );
+            }}
+          />
+          <AlertInput>{errors?.date?.message}</AlertInput>
+        </div>
+
+        <div className={cn(styles['radios'], 'mt-sm-8 mt-lg-16')}>
           <span className={styles['label']}>Time</span>
 
           <div className={styles['radio-group']}>

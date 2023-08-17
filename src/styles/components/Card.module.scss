@@ -1,4 +1,10 @@
 @use '../../app/base/functions' as *;
+.card {
+  @media (max-width: 450px) {
+    grid-column: span 6;
+  }
+  grid-column: span 3;
+}
 
 .inner {
   display: flex;
