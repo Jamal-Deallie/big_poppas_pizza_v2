@@ -1,8 +1,7 @@
 'use client';
 
-import { ReactNode, memo, useRef } from 'react';
-import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayout';
-import gsap from 'gsap';
+import { ReactNode, memo, useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 import { horizontalLoop } from '@/helpers/horizontalLoop';
 
 function Marquee({
@@ -15,7 +14,7 @@ function Marquee({
 
   const root = useRef<HTMLDivElement>(null!);
 
-  useIsomorphicLayoutEffect(() => {
+  useEffect(() => {
     const mm = gsap.matchMedia(root);
 
     mm.add('(min-width: 850px)', () => {

@@ -5,7 +5,7 @@ import MarqueeLoop from '@/components/MarqueeLoop';
 import { reviewItems } from '@/data/reviewItems';
 import cn from 'classnames';
 import styles from '@/styles/containers/Reviews.module.scss';
-import { Desktop, TabletAndBelow } from '@/components/MediaQueryEasyMode';
+import { IsDesktop, IsTablet } from '@/components/MediaQuery';
 
 export default function Reviews() {
   return (
@@ -15,7 +15,7 @@ export default function Reviews() {
           <div className={cn(styles['title-cont'], 'main-cont')}>
             <h1 className='title-lg tac'>The Reviews Are In</h1>
           </div>
-          <Desktop>
+          <IsDesktop>
             <div className='mt-sm-64 mt-lg-96'>
               <div>
                 <MarqueeLoop>
@@ -40,14 +40,14 @@ export default function Reviews() {
                 </MarqueeLoop>
               </div>
             </div>
-          </Desktop>
-          <TabletAndBelow>
+          </IsDesktop>
+          <IsTablet>
             <div className='main-cont mt-sm-64 mt-lg-96'>
               {reviewItems.slice(0, 3).map(({ id, name, review }) => (
                 <Review name={name} review={review} key={id} />
               ))}
             </div>
-          </TabletAndBelow>
+          </IsTablet>
         </div>
       </div>
     </section>

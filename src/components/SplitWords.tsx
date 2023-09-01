@@ -1,8 +1,8 @@
 'use client';
 
 import { ReactNode, useRef } from 'react';
-import { useIsomorphicLayoutEffect } from '../hooks/useIsomorphicLayout';
-import gsap from 'gsap';
+import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayout';
+import { gsap } from 'gsap';
 import SplitText from 'gsap/dist/SplitText';
 
 type AnimationProps = {

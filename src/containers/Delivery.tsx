@@ -1,13 +1,13 @@
 import Marquee from '@/containers/Marquee';
 import styles from '@/styles/containers/Delivery.module.scss';
-import { Desktop } from '@/components/MediaQueryEasyMode';
+import { IsDesktop, IsTablet } from '@/components/MediaQuery';
 import cn from 'classnames';
 import PizzaCutter from '@/svgs/PizzaCutter';
 
 export default function Delivery() {
   return (
     <div className={cn(styles['delivery'], 'bg-secondary')}>
-      <Desktop>
+      <IsDesktop>
         <div className={cn(styles['marquee-cont'], 'bg-primary')}>
           <Marquee repeat={10} reverse={true} />
           <Marquee repeat={10} />
@@ -16,7 +16,7 @@ export default function Delivery() {
           <Marquee repeat={10} reverse={true} />
           <Marquee repeat={10} />
         </div>
-      </Desktop>
+      </IsDesktop>
       <div
         className={cn(
           styles['content'],

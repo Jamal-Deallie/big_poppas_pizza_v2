@@ -2,7 +2,7 @@
 
 import { ReactNode, useRef } from 'react';
 import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayout';
-import gsap from 'gsap';
+import { gsap } from 'gsap';
 import { horizontalLoop } from '@/helpers/horizontalLoop';
 type Props = {
   children: ReactNode;

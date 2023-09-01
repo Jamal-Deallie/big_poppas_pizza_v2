@@ -1,5 +1,6 @@
-@use '../../app/base/functions' as *;
+
 @use 'sass:color';
+@import '../base/functions';
 
 .form-cont {
   label {

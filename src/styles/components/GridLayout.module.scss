@@ -1,5 +1,4 @@
-@use '../../app/base/functions' as *;
-
+@use '../base/functions' as *;
 
 .title {
   margin-inline: auto;
@@ -8,7 +7,6 @@
     max-width: mobile-vw(200px);
   }
   @include desktop {
-    max-width: desktop-vw(850px);   
+    max-width: desktop-vw(850px);
   }
-  
 }

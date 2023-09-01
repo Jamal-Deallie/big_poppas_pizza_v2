@@ -1,5 +1,5 @@
 //@ts-nocheck
-import gsap from 'gsap/dist/gsap';
+import { gsap } from 'gsap';
 import { Draggable } from 'gsap/dist/Draggable';
 import { InertiaPlugin } from 'gsap/dist/InertiaPlugin';
 

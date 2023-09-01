@@ -123,3 +123,16 @@
     flex-direction: column;
   }
 }
+
+.scroll-txt,
+.loop-item {
+  will-change: transform;
+}
+
+.img {
+  will-change: transform opacity rotate;
+}
+
+.title-item {
+  will-change: opacity;
+}

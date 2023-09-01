@@ -1,0 +1,101 @@
+@import './_functions.scss';
+@import './_reset.scss';
+@import './_media.scss';
+@import './_colors.scss';
+@import './_utilities.scss';
+@import './_font-style.scss';
+@import './_layouts.scss';
+@import './_spacing.scss';
+
+
+body {
+  min-height: 100vh;
+  color: var(--secondary-variant);
+  background-color: var(--secondary-variant);
+  font-family: var(--body-font);
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+.marquee {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.loop-item {
+  @include desktop {
+    position: relative;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    will-change: transform;
+  }
+}
+
+.react-datepicker-wrapper {
+  width: 100% !important;
+}
+
+.react-datepicker__input-container {
+  width: 100%;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.react-datepicker__calendar-icon {
+  width: 20px;
+  order: 2;
+}
+
+.react-datepicker__aria-live {
+  display: none;
+}
+
+:root {
+  --nav-height: #{mobile-vw(65px)};
+  --input-focus-h: 245;
+  --input-focus-s: 100%;
+  --input-focus-l: 42%;
+  --input-border: #000;
+  @include desktop {
+    --nav-height: #{desktop-vw(90px)};
+  }
+  @each $name, $color in $colors {
+    --#{$name}-variant: #{$color};
+  }
+}
+
+@import '../components/Accordion.module.scss';
+@import '../components/Card.module.scss';
+@import '../components/Commandment.module.scss';
+@import '../components/DesktopMenu.module.scss';
+@import '../components/DesktopNavbar.module.scss';
+@import '../components/EmailForm.module.scss';
+@import '../components/FadeInCarousel.module.scss';
+@import '../components/Footer.module.scss';
+@import '../components/Form.module.scss';
+@import '../components/GridAccordion.module.scss';
+@import '../components/HorizontalLoop.module.scss';
+@import '../components/Input.module.scss';
+@import '../components/Layout.module.scss';
+
+@import '../components/LinkAccordion.module.scss';
+@import '../components/LinkButton.module.scss';
+@import '../components/Loading.module.scss';
+@import '../components/Map.module.scss';
+@import '../components/Menu.module.scss';
+@import '../components/MenuLink.module.scss';
+@import '../components/MobileNavbar.module.scss';
+@import '../components/MenuLink.module.scss';
+@import '../components/Modal.module.scss';
+@import '../components/NavLinks.module.scss';
+@import '../components/NutritionCard.module.scss';
+@import '../components/ReservationForm.module.scss';
+@import '../components/Ring.module.scss';
+@import '../components/Review.module.scss';

@@ -1,17 +1,17 @@
 import DesktopNavbar from '@/components/Navbar/DesktopNavbar';
 import MobileNavbar from '@/components/Navbar/MobileNavbar';
-import { Desktop, TabletAndBelow } from '@/components/MediaQueryEasyMode';
+import { IsDesktop, IsTablet } from '@/components/MediaQuery';
 
 export default function Navbar() {
   return (
     <>
-      <TabletAndBelow>
+      <IsTablet>
         <MobileNavbar />
-      </TabletAndBelow>
+      </IsTablet>
 
-      <Desktop>
+      <IsDesktop>
         <DesktopNavbar />
-      </Desktop>
+      </IsDesktop>
     </>
   );
 }

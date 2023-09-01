@@ -38,6 +38,7 @@
     "react-dom": "18.2.0",
     "react-email": "1.9.4",
     "react-hook-form": "^7.43.5",
+    "react-hydration-provider": "^2.0.0",
     "react-map-gl": "^7.0.25",
     "react-responsive": "^9.0.2",
     "resend": "^0.16.0",
